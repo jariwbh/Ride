@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#00000000"
+>
+
+    <RelativeLayout
+        android:id="@+id/layoutHomeTop"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+ >
+
+        <Button
+            android:id="@+id/btnBack"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:background="@drawable/button_back_ren" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="Address"
+            android:textColor="@color/White"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/layoutEditLocation"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/layoutHomeTop"
+        android:background="@drawable/search_bar_bg" >
+
+        <Button
+            android:id="@+id/btnPicUp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:text="PickUp" />
+
+        <Button
+            android:id="@+id/btnDestination"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:text="Destination" />
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_toLeftOf="@+id/btnDestination"
+            android:layout_toRightOf="@+id/btnPicUp"
+            android:background="@drawable/search_bar" >
+
+            <Button
+                android:id="@+id/btnSearch"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="5dp"
+                android:background="@drawable/icon_search" />
+
+            <EditText
+                android:id="@+id/edtPickUpAddress"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_toLeftOf="@+id/btnCross"
+                android:layout_toRightOf="@+id/btnSearch"
+                android:background="@android:color/transparent"
+                android:gravity="center_vertical"
+                android:paddingLeft="5dp"
+                android:singleLine="true"
+                android:text="Enter location " />
+
+            <Button
+                android:id="@+id/btnCross"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="5dp"
+                android:background="@drawable/icon_cross" />
+        </RelativeLayout>
+    </RelativeLayout>
+
+    <ListView
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_below="@+id/layoutEditLocation" >
+    </ListView>
+
+</RelativeLayout>

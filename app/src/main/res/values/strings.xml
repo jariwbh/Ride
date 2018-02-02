@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="aplication_name">TMS Rider</string>
+
+
+    <string name="forget_password">Forget your password ?</string>
+    <string name="dont_have_account">Don\'t have an Account !</string>
+    <string name="create_new_account">Create new account</string>
+    <string name="remember_password">Remember me</string>
+    <string name="next">NEXT</string>
+    <string name="term_condition">By continue you Accept the Terms and Conditions and Privacy Policy</string>
+
+    <!-- Following with kapil.bansal@netsmartz.net-->
+    <!-- <string name="mapv2_release_key">AIzaSyB7emCvT7gKU7fmJrkpBppfCxjvXfR6GOE</string>-->
+
+
+    <!-- <string name="mapv2_release_key">AIzaSyC6JnUQGQpXxq6u1LqQicbrcjnDVXzNNkQ</string>-->
+    <!--<string name="mapv2_release_key">AIzaSyB8ftZfwYKef0p96HpwKHxs3Gfr6aZb0u0</string>-->
+    <!-- <string name="mapv2_release_key">AIzaSyDPqzqkyEnnyuLip0DIlrCR8WvwjokwVhw</string>Commented on 26/09/2017-->
+    <!--API console username: abouavong@inbold.ca-->
+
+
+    <!--   <string name="mapv2_debug_key">AIzaSyBn7gbeXUCe3hJbFMrL7rb6MW2is-9MfpU</string> -->
+
+
+    <string name="login_web_link">Powered by <u>Taxi Mobile Solutions</u></string>
+
+    <string name="driver_arriving">Your driver is arriving soon</string>
+    <!-- GCM -->
+    <string name="gcm_error">From GCM: error (%1$s).</string>
+    <string name="gcm_recoverable_error">From GCM: recoverable error (%1$s).</string>
+    <string name="gcm_deleted">From GCM: server deleted %1$d pending messages!</string>
+    <string name="logout">Logout</string>
+    <string name="email">Email Address</string>
+    <string name="password">Password</string>
+    <string name="set_password">Set Password</string>
+    <string name="confirm_password">Confirm Password</string>
+    <string name="linkCard">LINK CARD</string>
+    <string name="skip_card"><u>Skip</u></string>
+    <string name="credit_card_no">CreditCard No</string>
+    <string name="expiry_date">Expiry Date</string>
+    <string name="cvv_no">CVV No</string>
+    <string name="terms_condition">TERMS AND CONDITION</string>
+    <string name="varify_mobile">VERIFY MOBILE</string>
+    <string name="changePhoneNumber">CHANGE PHONE NUMBER</string>
+    <string name="phone">Phone</string>
+    <string name="done">Done</string>
+    <string name="credit_card">Credit card</string>
+    <string name="edit_card">EDIT CARD</string>
+    <string name="yourReciept">YOUR RECEIPT</string>
+    <string name="reservation">Reservation</string>
+    <string name="reservation_listing">Rreservations</string>
+    <string name="first_name">First Name</string>
+    <string name="last_name">Last Name</string>
+
+
+    <string name="editProfile">EDIT PROFILE</string>
+    <string name="refer_a_friend">Refer a friend</string>
+    <string name="promoCode">Enter Promo Code</string>
+    <string name="oldPassword">Old Password</string>
+    <string name="newPassword">New Password</string>
+    <string name="confirmPass">Confirm Password</string>
+
+    <string name="applicationId">9661893334345000</string>
+    <!-- <string name="applicationId">511597185599546</string> -->
+    <string name="aboutUs">About us</string>
+    <string name="no_internet_connection">No Internet Connection.</string>
+
+    <string name="send_me_password">SEND ME PASSWORD</string>
+    <string name="forgot_password_header">FORGOT PASSWORD </string>
+    <string name="info_forgot_password">Please enter your registered email address above.We will send you an email with your new password. </string>
+    <string name="info_register">With your name and photo the driver can easily identify you at pickup.</string>
+    <string name="tap_on_frame">Tap on frame to add your photo</string>
+    <string name="submit">SUBMIT</string>
+    <string name="info_link_card">Your card details will be used whenever you avail our services. The tariff amount will be automatically charged with the help of these details.</string>
+    <string name="info_register_1">With the above details we will notify you with the ride confirmation and other details.</string>
+    <string name="register">REGISTER</string>
+
+    <string name="accept">ACCEPT</string>
+    <string name="decline">DECLINE</string>
+    <string name="my_profile">Profile</string>
+
+    <string name="promo_code">Apply coupon</string>
+
+
+    <string name="contact_us">Contact us</string>
+
+    <string name="resend_code">RESEND CODE</string>
+    <string name="change_phone_no">CHANGE PHONE NUMBER</string>
+    <string name="change_password">CHANGE PASSWORD</string>
+    <string name="enter_the_promo">Enter the promo code in the field above.\nYou can use one promo code at a time.</string>
+
+    <string name="credit_card_detials_info">This card cannot be deleted.There must be atleast one credit card linked to your account. </string>
+    <string name="driver_pop_up_title"> <u>Driver Details</u></string>
+
+    <string name="rating_alert">Please provide rating.</string>
+    <string name="check_list">CHECK BEFORE YOU RIDE</string>
+    <string name="safe_ride_check_list">SAFE RIDE CHECKLIST:</string>
+    <string name="no_reservation">No Reservations</string>
+
+    <string name="payvia1">The amount above was charged to your credit card and a receipt for the charge was sent to your registered email address.</string>
+    <string name="payvia0">The amount above is charged to you by cash and a receipt for the charge was sent to your registered email address</string>
+    <string name="trip_cancelled_receipt">Trip Cancelled!</string>
+    <string name="payvia_decline">The amount below was charged to your credit card and a receipt for the charge was sent to your registered email address.</string>
+    <string name="payvia_decline_cash">The amount below is charged to you by cash and a receipt for the charge was sent to your registered email address.</string>
+    <string name="reservation_no_place_found">No place found</string>
+    <string name="gpsPermission">Enable GPS Permission</string>
+    <string name="gpsError">Can not find location without enable the gps permission.</string>
+    <string name="route_not_found">Route not found</string>
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+
+    <string name="taxi_mobile_solution">TAXI MOBILE SOLUTION</string>
+    <string name="add_payment">Add Payment details</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="title_activity_main4">MainActivity4</string>
+</resources>

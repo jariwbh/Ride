@@ -1,0 +1,247 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/transparent_bg"
+    android:orientation="vertical"
+    android:weightSum="10">
+
+    <LinearLayout android:orientation="vertical"
+        android:layout_width="300dp"
+        android:layout_height="match_parent">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="150dp"
+            android:background="@color/colorPrimary">
+
+            <TextView
+                android:id="@+id/txtTag"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_above="@+id/textView2"
+                android:layout_alignLeft="@+id/textView7"
+                android:layout_alignStart="@+id/textView7"
+                android:text="@string/aplication_name"
+                android:textColor="@color/black"
+                android:textSize="16sp"
+                android:textStyle="bold" />
+
+            <ImageView
+                android:id="@+id/profile_image"
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="25dp"
+                android:layout_marginStart="25dp"
+                app:srcCompat="@drawable/profile_pic_profile" />
+
+            <TextView
+                android:id="@+id/textView2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignLeft="@+id/textView7"
+                android:layout_alignStart="@+id/textView7"
+                android:layout_centerVertical="true"
+                android:text="TextView"
+                android:textColor="@color/black" />
+
+            <TextView
+                android:id="@+id/textView7"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/textView2"
+                android:layout_marginLeft="38dp"
+                android:layout_marginStart="38dp"
+                android:layout_toEndOf="@+id/profile_image"
+                android:layout_toRightOf="@+id/profile_image"
+                android:text="TextView"
+                android:textColor="@color/black" />
+        </RelativeLayout>
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_above="@+id/btnBack"
+            android:layout_weight="9"
+            android:background="#FFFFFF">
+
+            <LinearLayout
+                style="@style/behindMenuScrollContent"
+                android:layout_height="fill_parent"
+                android:background="@color/white">
+
+                <LinearLayout
+                    android:id="@+id/btnMyProfile"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical"
+                    android:padding="10dp">
+
+                    <ImageView
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="20dp"
+                        android:background="@color/gray"
+                        android:src="@drawable/icon_profile" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/my_profile"
+                        android:textColor="@color/black" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/btnCreditcard"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical"
+                    android:padding="10dp">
+
+                    <ImageView
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="20dp"
+                        android:background="@color/gray"
+                        android:src="@drawable/icon_credit_card" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/credit_card"
+                        android:textColor="@color/black" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/btnPromoCode"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical"
+                    android:padding="10dp">
+
+                    <ImageView
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="20dp"
+                        android:background="@color/gray"
+                        android:src="@drawable/icon_promo_card" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/promo_code"
+                        android:textColor="@color/black" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/btnReferFrnd"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical"
+                    android:padding="10dp">
+
+                    <ImageView
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="20dp"
+                        android:background="@color/gray"
+                        android:src="@drawable/icon_refer_friend" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/refer_a_friend"
+                        android:textColor="@color/black" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/btnAboutUs"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical"
+                    android:padding="10dp">
+
+                    <ImageView
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="20dp"
+                        android:background="@color/gray"
+                        android:src="@drawable/icon_about" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/aboutUs"
+                        android:textColor="@color/black" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/btnContactUs"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical"
+                    android:padding="10dp">
+
+                    <ImageView
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="20dp"
+                        android:background="@color/gray"
+                        android:src="@drawable/icon_mail_changed" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/contact_us"
+                        android:textColor="@color/black" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/btnReservation"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical"
+                    android:padding="10dp">
+
+                    <ImageView
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="20dp"
+                        android:background="@color/gray"
+                        android:src="@drawable/icon_reservation" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/reservation"
+                        android:textColor="@color/black" />
+                </LinearLayout>
+
+
+            </LinearLayout>
+        </ScrollView>
+
+        <Button
+            android:id="@+id/btnBack"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_margin="5dp"
+            android:layout_weight="1"
+            android:background="@drawable/background_oval_button"
+            android:gravity="center"
+            android:text="BACK"
+            android:textColor="@color/button_text_color"
+            android:visibility="gone" />
+
+    </LinearLayout>
+</LinearLayout>

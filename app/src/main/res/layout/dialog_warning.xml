@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@android:color/transparent"
+>
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:alpha=".8"
+        android:background="@color/black" />
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:layout_centerInParent="true"
+        android:background="@drawable/background_base_fare"
+        android:padding="10dp" >
+
+        <RelativeLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true" >
+
+            <TextView
+                android:id="@+id/dialog_title_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="5dp"
+                android:textColor="@color/text_color"
+                android:textSize="18sp"
+                
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/dialog_message_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/dialog_title_text"
+                android:layout_centerHorizontal="true"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:layout_marginTop="7dp"
+                android:textColor="@color/text_color"
+                android:textSize="16sp"
+                android:textStyle="normal" />
+
+            <Button
+                android:id="@+id/btnDone"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/dialog_message_text"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/button_oval_shape"
+                android:paddingBottom="10dp"
+                android:paddingLeft="30dp"
+                android:paddingRight="30dp"
+                android:paddingTop="10dp"
+                android:text="OK"
+                android:textColor="@color/button_text_color" />
+
+            <RelativeLayout
+                android:id="@+id/layoutYesNo"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/dialog_message_text"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="20dp"
+                android:gravity="center_horizontal"
+                android:weightSum="1" >
+
+                <Button
+                    android:id="@+id/dialog_ok_btn"
+                    android:layout_width="80dp"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="5dp"
+                    android:layout_weight=".5"
+                    android:background="@drawable/button_oval_shape"
+                    android:padding="10dp"
+                    android:text="YES"
+                    android:textColor="@color/button_text_color"
+                    android:visibility="gone" />
+
+                <Button
+                    android:id="@+id/dialog_cancel_btn"
+                    android:layout_width="80dp"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="5dp"
+                    android:layout_toRightOf="@+id/dialog_ok_btn"
+                    android:layout_weight=".5"
+                    android:background="@drawable/button_oval_shape"
+                    android:padding="10dp"
+                    android:text="NO"
+                    android:textColor="@color/button_text_color"
+                    android:visibility="gone" />
+            </RelativeLayout>
+        </RelativeLayout>
+    </RelativeLayout>
+
+    
+
+</RelativeLayout>

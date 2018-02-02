@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#ffffff">
+
+    <RelativeLayout
+        android:id="@+id/layoutTop"
+        android:layout_width="fill_parent"
+        android:layout_height="50dp"
+        android:background="@color/colorPrimary">
+
+        <ImageView
+            android:id="@+id/btnCancelPromo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="10dp"
+            android:background="@drawable/ic_left_arrow" />
+
+        <TextView
+            android:id="@+id/header_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_toEndOf="@+id/btnCancelPromo"
+            android:layout_toRightOf="@+id/btnCancelPromo"
+            android:text="@string/promo_code"
+            android:textColor="@color/primaryTextColor"
+            android:textSize="16sp"
+            android:textStyle="bold" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_below="@+id/layoutTop"
+        android:layout_margin="10dp"
+        android:padding="10dp">
+
+        <RelativeLayout
+            android:id="@+id/btnAddPromo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/background_oval_button">
+
+            <Button
+                android:id="@+id/btn1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@color/transparent"
+                android:visibility="gone" />
+
+            <Button
+                android:id="@+id/btn2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@+id/btn1"
+                android:background="@color/colorPrimary"
+                android:gravity="center"
+                android:padding="10dp"
+                android:text="ADD COUPON" />
+        </RelativeLayout>
+
+        <ListView
+            android:id="@+id/promo_code_listing"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/btnAddPromo"
+            android:layout_marginBottom="20dp"
+            android:layout_marginTop="10dp"
+            android:background="@color/middle_background"
+            android:divider="@color/black"
+            android:dividerHeight="1dp"
+            android:paddingBottom="10dp" />
+    </RelativeLayout>
+
+</RelativeLayout>

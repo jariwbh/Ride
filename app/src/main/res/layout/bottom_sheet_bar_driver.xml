@@ -1,0 +1,253 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.tms.activity.Home">
+
+    <RelativeLayout
+        android:id="@+id/design_bottom_sheet"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingLeft="@dimen/activity_horizontal_margin"
+        android:paddingRight="@dimen/activity_horizontal_margin"
+        app:behavior_hideable="false"
+        app:behavior_peekHeight="180dp"
+        app:elevation="4dp"
+        app:layout_behavior="@string/bottom_sheet_behavior">
+
+        <LinearLayout
+            android:id="@+id/location"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:background="@drawable/shadow_bg">
+
+            <ImageView
+                android:id="@+id/btnMyLocationNew"
+                android:layout_width="45dp"
+                android:layout_height="45dp"
+                android:padding="10dp"
+                app:srcCompat="@drawable/ic_current_location" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/layoutDriverDetailBottom"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/location"
+            android:background="@drawable/shadow_bg"
+            android:orientation="vertical"
+            android:weightSum="1">
+
+            <RelativeLayout
+                android:id="@+id/relImageName"
+                android:layout_width="match_parent"
+                android:layout_height="113dp">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:gravity="center_vertical">
+
+                    <ImageView
+                        android:id="@+id/imgDriverPic"
+                        android:layout_width="80dp"
+                        android:layout_height="80dp"
+                        android:layout_alignParentLeft="true"
+                        android:layout_margin="10dp"
+                        android:background="@drawable/profile_pic_profile" />
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignRight="@+id/imgDriverPic"
+                        android:layout_centerVertical="true"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/txtDriverName"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="sans-serif"
+                            android:maxLength="20"
+                            android:text="Name"
+                            android:textColor="@color/colorText"
+                            android:textSize="12sp" />
+
+                        <TextView
+                            android:id="@+id/txtDriverPhone"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="sans-serif-light"
+                            android:text="@string/phone"
+                            android:textColor="@color/colorText"
+                            android:textSize="9.33sp" />
+
+                    </LinearLayout>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="10dp"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/txtTaxiNo"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:ellipsize="end"
+                        android:fontFamily="sans-serif"
+                        android:text="taxi no"
+                        android:textColor="@color/colorText"
+                        android:textSize="12sp" />
+
+                    <TextView
+                        android:id="@+id/txtCompanyName"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:ellipsize="end"
+                        android:fontFamily="sans-serif-light"
+                        android:maxLength="20"
+                        android:text="car info"
+                        android:textColor="@color/colorText"
+                        android:textSize="9.33sp" />
+
+                </LinearLayout>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentTop="true"
+                    android:layout_centerHorizontal="true"
+                    android:fontFamily="sans-serif-light"
+                    android:text="Your driver will reach soon"
+                    android:textColor="@color/gray"
+                    android:textSize="8.66dp"
+                    android:visibility="gone" />
+
+
+            </RelativeLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="#d9d9d9" />
+
+            <Button
+                android:id="@+id/btnDriverOption"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_weight=".2"
+                android:background="@color/colorPrimary"
+                android:gravity="center"
+                android:text="MORE\nINFO"
+                android:textColor="#000000"
+                android:visibility="gone" />
+
+            <LinearLayout
+                android:id="@+id/rel_2"
+                android:layout_width="match_parent"
+                android:layout_height="113dp"
+                android:layout_below="@+id/rel_1"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_margin="5dp"
+                    android:gravity="center_vertical|center_horizontal"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:id="@+id/btnCallDriver"
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+
+                        android:background="@drawable/ic_call"
+                        android:gravity="left|center_vertical"
+                        android:text="CALL DRIVER"
+                        android:textColor="@color/white" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
+                        android:fontFamily="sans-serif"
+                        android:text="Call Driver"
+                        android:textColor="@color/colorText"
+                        android:textSize="8.33sp" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+
+                    android:layout_margin="5dp"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:id="@+id/btnSMSDriver"
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        android:layout_marginLeft="39dp"
+                        android:layout_marginRight="39dp"
+                        android:background="@drawable/ic_sms"
+                        android:gravity="left|center_vertical"
+                        android:text="CALL DRIVER"
+                        android:textColor="@color/white" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
+                        android:fontFamily="sans-serif"
+                        android:text="SMS Driver"
+                        android:textColor="@color/colorText"
+                        android:textSize="8.33sp" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_margin="5dp"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:id="@+id/btnCancelTrip"
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/ic_cancel_trip"
+                        android:gravity="left|center_vertical"
+                        android:text="CALL DRIVER"
+                        android:textColor="@color/white" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
+                        android:fontFamily="sans-serif"
+                        android:text="Cancel Trip"
+                        android:textColor="@color/colorText"
+                        android:textSize="8.33sp" />
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </RelativeLayout>
+</android.support.design.widget.CoordinatorLayout>

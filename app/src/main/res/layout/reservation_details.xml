@@ -1,0 +1,368 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white">
+
+    <RelativeLayout
+        android:id="@+id/rel_top"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="@color/colorPrimary">
+
+        <ImageView
+            android:id="@+id/btnBack"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="10dp"
+            android:background="@drawable/ic_left_arrow" />
+
+        <TextView
+            android:id="@+id/txtTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_toEndOf="@+id/btnBack"
+            android:layout_toRightOf="@+id/btnBack"
+            android:text="@string/reservation"
+            android:textColor="@color/primaryTextColor"
+            android:textStyle="bold" />
+
+
+    </RelativeLayout>
+
+
+    <TextView
+        android:id="@+id/txtInfo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/rel_top"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="5dp"
+        android:padding="4dp"
+        android:text="You cannot cancel reservation 1 hour prior." />
+
+    <RelativeLayout
+        android:id="@+id/relativeLayout2"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/txtInfo"
+        android:layout_margin="10dp"
+        android:background="@color/reservation_background_color"
+        android:paddingBottom="10dp">
+
+            <LinearLayout
+                android:id="@+id/mainRel"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:paddingBottom="10dp"
+                android:paddingLeft="20dp"
+                android:paddingRight="20dp">
+
+                <TextView
+                    android:id="@+id/edtName"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:layout_toRightOf="@+id/imgName"
+                    android:background="@drawable/background_text_field_new"
+                    android:digits="qwertyuiopasdfghjklzxcvbnmMNBVCXZLKJHGFDSAPOIUYTREWQ "
+                    android:drawableLeft="@drawable/name_icon"
+                    android:gravity="center"
+                    android:inputType="textCapSentences"
+                    android:maxLength="30"
+                    android:padding="5dp"
+                    android:singleLine="true"
+                    android:textColor="@color/text_color"
+                    android:textSize="18sp" />
+
+                <RelativeLayout
+                    android:id="@+id/relPLoc"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/edtName"
+                    android:layout_marginTop="5dp">
+
+                    <TextView
+                        android:id="@+id/edtPLoc"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/imgName"
+                        android:layout_toRightOf="@+id/imgPLoc"
+                        android:background="@drawable/background_text_field_new"
+                        android:drawableLeft="@drawable/pick_up_location_icon"
+                        android:gravity="center"
+                        android:padding="5dp"
+                        android:textColor="@color/text_color"
+                        android:textSize="18sp" />
+                </RelativeLayout>
+
+                <TextView
+                    android:id="@+id/edtDLoc"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/relPLoc"
+                    android:layout_marginTop="5dp"
+                    android:layout_toRightOf="@+id/imgDLoc"
+                    android:background="@drawable/background_text_field_new"
+                    android:drawableLeft="@drawable/drop_off_location_icon"
+                    android:gravity="center"
+                    android:padding="5dp"
+                    android:textColor="@color/text_color"
+                    android:textSize="18sp" />
+
+
+                <TextView
+                    android:id="@+id/edtPDate"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/imgDLoc"
+                    android:layout_marginTop="5dp"
+                    android:layout_toRightOf="@+id/imgPTime"
+                    android:background="@drawable/background_text_field_new"
+                    android:drawableLeft="@drawable/pick_up_date_icon"
+                    android:gravity="center"
+                    android:maxLength="15"
+                    android:padding="5dp"
+                    android:singleLine="true"
+                    android:textColor="@color/text_color"
+                    android:textSize="18sp" />
+
+                <TextView
+                    android:id="@+id/edtPTime"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/imgPDate"
+                    android:layout_marginTop="5dp"
+                    android:layout_toRightOf="@+id/imgPTime"
+                    android:background="@drawable/background_text_field_new"
+                    android:digits="1234567890:"
+                    android:drawableLeft="@drawable/pick_up_time_icon"
+                    android:gravity="center"
+
+                    android:padding="5dp"
+                    android:singleLine="true"
+                    android:textColor="@color/text_color"
+                    android:textSize="18sp" />
+
+                <TextView
+                    android:id="@+id/edtPhNumber"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/imgPTime"
+                    android:layout_marginTop="5dp"
+                    android:layout_toRightOf="@+id/imgPTime"
+                    android:background="@drawable/background_text_field_new"
+                    android:drawableLeft="@drawable/phone_icon"
+                    android:gravity="center"
+                    android:inputType="phone"
+                    android:maxLength="15"
+                    android:padding="5dp"
+                    android:singleLine="true"
+                    android:textColor="@color/text_color"
+                    android:textSize="18sp" />
+
+                <TextView
+                    android:id="@+id/edtCarType"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/imgPhNumber"
+                    android:layout_marginTop="5dp"
+                    android:layout_toRightOf="@+id/imgCarType"
+                    android:background="@drawable/background_text_field_new"
+                    android:drawableLeft="@drawable/car_type_icon"
+                    android:gravity="center"
+                    android:maxLength="15"
+                    android:padding="5dp"
+                    android:singleLine="true"
+                    android:textColor="@color/text_color"
+                    android:textSize="18sp" />
+
+                <TextView
+                    android:id="@+id/edtFare"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:background="@drawable/background_text_field_new"
+                    android:drawableLeft="@drawable/price_icon"
+                    android:gravity="center"
+                    android:maxLength="15"
+                    android:padding="5dp"
+                    android:singleLine="true"
+                    android:textColor="@color/text_color"
+                    android:textSize="18sp" />
+
+                <TextView
+                    android:id="@+id/edtAirLine"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/edtCarType"
+                    android:layout_marginTop="5dp"
+                    android:layout_toRightOf="@+id/imgCarType"
+                    android:background="@drawable/background_text_field_new"
+                    android:drawableLeft="@drawable/airplane"
+                    android:gravity="center"
+                    android:maxLength="15"
+                    android:padding="5dp"
+                    android:singleLine="true"
+                    android:textColor="@color/text_color"
+                    android:textSize="18sp"
+                    android:visibility="gone" />
+
+                <TextView
+                    android:id="@+id/edtFlight"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/edtAirLine"
+                    android:layout_marginTop="5dp"
+                    android:layout_toRightOf="@+id/imgCarType"
+                    android:background="@drawable/background_text_field_new"
+                    android:drawableLeft="@drawable/airplane_numbers"
+                    android:gravity="center"
+                    android:maxLength="15"
+                    android:padding="5dp"
+                    android:singleLine="true"
+                    android:textColor="@color/text_color"
+                    android:textSize="18sp"
+                    android:visibility="gone" />
+
+                <TextView
+                    android:id="@+id/edtItemToMove"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/edtAirLine"
+                    android:layout_marginTop="5dp"
+                    android:layout_toRightOf="@+id/imgCarType"
+                    android:background="@drawable/background_text_field_new"
+                    android:drawableLeft="@drawable/items_to_move_icons"
+                    android:gravity="center"
+                    android:maxLength="15"
+                    android:padding="5dp"
+                    android:singleLine="true"
+                    android:textColor="@color/text_color"
+                    android:textSize="18sp"
+                    android:visibility="gone" />
+
+                <TextView
+                    android:id="@+id/edtWeight"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/edtAirLine"
+                    android:layout_marginTop="5dp"
+                    android:layout_toRightOf="@+id/imgCarType"
+                    android:background="@drawable/background_text_field_new"
+                    android:drawableLeft="@drawable/weight_of_items_icon"
+                    android:gravity="center"
+                    android:maxLength="15"
+                    android:padding="5dp"
+                    android:singleLine="true"
+                    android:textColor="@color/text_color"
+                    android:textSize="18sp"
+                    android:visibility="gone" />
+
+                <TextView
+                    android:id="@+id/edtDimensions"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/edtAirLine"
+                    android:layout_marginTop="5dp"
+                    android:layout_toRightOf="@+id/imgCarType"
+                    android:background="@drawable/background_text_field_new"
+                    android:drawableLeft="@drawable/dimmensions_icon"
+                    android:gravity="center"
+                    android:maxLength="15"
+                    android:padding="5dp"
+                    android:singleLine="true"
+                    android:textColor="@color/text_color"
+                    android:textSize="18sp"
+                    android:visibility="gone" />
+
+                <TextView
+                    android:id="@+id/edtComments"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/edtAirLine"
+                    android:layout_marginTop="5dp"
+                    android:layout_toRightOf="@+id/imgCarType"
+                    android:background="@drawable/background_text_field_new"
+                    android:drawableLeft="@drawable/comments_icon"
+                    android:gravity="center"
+                    android:maxLength="15"
+                    android:padding="5dp"
+                    android:singleLine="true"
+                    android:textColor="@color/text_color"
+                    android:textSize="18sp"
+                    android:visibility="gone" />
+
+
+            </LinearLayout>
+
+
+
+
+        <LinearLayout
+            android:id="@+id/layoutBtn"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_margin="3dp"
+
+            android:orientation="vertical"
+           >
+
+
+            <Button
+                android:id="@+id/btnConfirmation"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+
+                android:layout_margin="20dp"
+                android:background="@color/colorPrimary"
+                android:padding="10dp"
+                android:text="Confirm reservation"
+                android:textColor="@color/Black" />
+
+
+            <Button
+
+                android:id="@+id/btnCancel"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+
+
+                android:layout_margin="20dp"
+                android:background="@color/colorPrimary"
+                android:text="Cancel reservation"
+                android:textColor="@color/Black" />
+
+        </LinearLayout>
+
+    </RelativeLayout>
+
+    <Button
+        android:id="@+id/btndriverDetails"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/relativeLayout2"
+        android:layout_marginBottom="36dp"
+        android:layout_toEndOf="@+id/relativeLayout2"
+        android:layout_toRightOf="@+id/relativeLayout2"
+        android:background="@color/colorPrimary"
+        android:padding="10dp"
+        android:text="Driver details"
+        android:textColor="@color/Black"></Button>
+
+    <TextView
+        android:id="@+id/txtStatus"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/btndriverDetails"
+        android:layout_alignEnd="@+id/relativeLayout2"
+        android:layout_alignRight="@+id/relativeLayout2"
+        android:background="@color/White"
+        android:textColor="@color/theme_color"
+        android:textSize="10sp" />
+
+</RelativeLayout>

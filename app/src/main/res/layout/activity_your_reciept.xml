@@ -1,0 +1,644 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+     >
+
+    <RelativeLayout
+        android:id="@+id/layoutRecieptTop"
+        android:layout_width="fill_parent"
+        android:layout_height="50dp"
+        android:background="@color/White">
+
+        <!--
+             <Button
+            android:id="@+id/btnDrawer"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:background="@drawable/button_drawer" />
+
+        -->
+
+        <TextView
+            android:id="@+id/headerText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="11dp"
+            android:layout_marginStart="11dp"
+            android:layout_toEndOf="@+id/imageView"
+            android:layout_toRightOf="@+id/imageView"
+            android:text="Reciept"
+            android:textColor="@color/text_color"
+            android:textSize="14sp" />
+
+        <ImageView
+            android:id="@+id/imageView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_centerVertical="true"
+            app:srcCompat="@drawable/ic_left_arrow" />
+    </RelativeLayout>
+    <LinearLayout
+        android:id="@+id/layoutRatingBar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/btnSubmit"
+        android:layout_centerHorizontal="true"
+        android:background="@drawable/background_comment_box"
+        android:gravity="center_horizontal"
+        android:orientation="vertical"
+        android:visibility="visible" >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginTop="5dp"
+            android:text="Great"
+            android:textSize="12sp" />
+
+        <RatingBar
+            android:id="@+id/ratingBarDriver"
+            style="@style/StarRatingBar"
+            android:layout_width="wrap_content"
+            android:layout_height="22dp"
+            android:layout_centerVertical="true"
+            android:layout_marginTop="5dp"
+            android:layout_toRightOf="@+id/txtWorst"
+            android:numStars="5"
+            android:stepSize="1" />
+
+        <TextView
+            android:id="@+id/txtRatingtType"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="5dp"
+            android:layout_marginTop="5dp"
+            android:textColor="@color/white" />
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/btnSubmit"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="10dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:background="@color/colorPrimary"
+        android:paddingBottom="15dp"
+        android:paddingTop="15dp"
+        android:text="SUBMIT"
+        android:textColor="@color/button_text_color" />
+
+    <ScrollView
+        android:id="@+id/scrollView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/btnSubmit"
+        android:layout_below="@+id/layoutRecieptTop" >
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" >
+
+            <RelativeLayout
+                android:id="@+id/layoutRecieptMid"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/layoutRecieptTop"
+                android:layout_marginTop="2dp"
+                android:background="@color/gray"
+                android:padding="5dp" >
+
+                <RelativeLayout
+                    android:id="@+id/driverImageThumb"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginTop="5dp"
+                    android:background="@drawable/profile_thumb" >
+
+                    <ImageView
+                        android:id="@+id/imgDriverPic"
+                        android:layout_width="70dp"
+                        android:layout_height="70dp"
+                        android:layout_centerInParent="true" />
+                </RelativeLayout>
+
+                <TextView
+                    android:id="@+id/txtDriverName"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_toRightOf="@+id/driverImageThumb"
+                    android:ellipsize="end"
+                    android:maxLength="20"
+                    android:text="Driver name"
+                    android:textColor="@color/text_color"
+                    android:textSize="20sp"
+                    android:textStyle="bold" />
+
+                <ImageView
+                    android:id="@+id/phoneIcon"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/txtDriverName"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_toRightOf="@+id/driverImageThumb"
+                    android:background="@drawable/icon_phnumber"
+                    android:visibility="invisible" />
+
+                <TextView
+                    android:id="@+id/txtDriverPhone"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/txtDriverName"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_toRightOf="@+id/phoneIcon"
+                    android:text="@string/phone"
+                    android:textColor="@color/text_color"
+                    android:textSize="16sp"
+                    android:textStyle="bold" />
+
+                <ImageView
+                    android:id="@+id/imgCarIcon"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/phoneIcon"
+
+                    android:layout_marginTop="10dp"
+                    android:layout_toRightOf="@+id/driverImageThumb"
+                    android:background="@drawable/icon_suvcar_grey"
+                    android:visibility="gone" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/phoneIcon"
+                    android:layout_toRightOf="@+id/imgCarIcon"
+                    android:orientation="horizontal"
+                    android:weightSum="2" >
+
+                    <TextView
+                        android:id="@+id/txtCompanyName"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="5dp"
+                        android:layout_marginTop="5dp"
+                        android:layout_weight="1"
+                        android:ellipsize="end"
+                        android:maxLength="20"
+                        android:maxLines="2"
+                        android:text="Car detail"
+                        android:textColor="@color/text_color"
+                        android:textSize="15sp"
+                        android:textStyle="bold" />
+
+                    <ImageView
+                        android:id="@+id/imgDivider"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/phoneIcon"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginTop="5dp"
+                        android:layout_toRightOf="@+id/txtCompanyName"
+                        android:layout_weight="0" />
+
+                    <TextView
+                        android:id="@+id/txtTaxiNo"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/phoneIcon"
+                        android:layout_marginLeft="5dp"
+                        android:layout_marginTop="5dp"
+                        android:layout_toRightOf="@+id/imgDivider"
+                        android:layout_weight="1"
+                        android:ellipsize="end"
+                        android:maxLength="10"
+                        android:text="Taxi no"
+                        android:textColor="@color/text_color"
+                        android:textSize="15sp"
+                        android:textStyle="bold" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="60dp"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginTop="3dp"
+                    android:gravity="center_horizontal"
+                    android:orientation="vertical"
+                    android:weightSum="1" >
+
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight=".8"
+                        android:background="@color/title_color"
+                        android:paddingBottom="3dp"
+                        android:paddingLeft="5dp"
+                        android:paddingRight="5dp"
+                        android:paddingTop="3dp"
+                        android:src="@drawable/rate_star_unselected_box"
+                      />
+
+                    <TextView
+                        android:id="@+id/txtRating"
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight=".2"
+                        android:background="@color/gray"
+                        android:gravity="bottom|center_horizontal"
+                        android:padding="5dp"
+                        android:text="4.4"
+                        android:textColor="@color/black"
+                        android:textSize="15sp"
+                        android:textStyle="bold" />
+                </LinearLayout>
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_margin="5dp" >
+            </RelativeLayout>
+
+
+            <LinearLayout
+                android:id="@+id/rel_new"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/layoutRecieptMid"
+                android:background="#FFFFFF"
+                android:gravity="center_horizontal"
+                android:orientation="vertical"
+                android:padding="5dp"
+                android:visibility="visible">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:text="Trip fare"
+                    android:textColor="@color/receipt_content_text_color"
+                    android:textSize="15sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/txtDate"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:text="10 September 2013"
+                    android:textColor="@color/receipt_content_text_color"
+                    android:textSize="15sp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/txtDate"
+                    android:background="@color/colorPrimary"
+                    android:padding="5dp"
+                    android:text="Total Fare:"
+                    android:textColor="@color/receipt_content_text_color"
+                    android:textSize="15sp"
+                    android:textStyle="bold"
+                    android:visibility="gone" />
+
+                <TextView
+                    android:id="@+id/txtFare"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignRight="@+id/txtDate"
+                    android:layout_below="@+id/txtDate"
+                    android:background="@color/colorPrimary"
+                    android:padding="5dp"
+                    android:text="$ 50"
+                    android:textColor="@color/primaryTextColor"
+                    android:textSize="15sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/imgReceipt_text2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/txtFare"
+                    android:layout_centerHorizontal="true"
+                    android:gravity="center"
+                    android:text="A receipt for the charge was send to your registered email address"
+                    android:textColor="@color/receipt_content_text_color"
+                    android:textSize="8sp" />
+
+
+                <Button
+                    android:id="@+id/btnToroWebLink"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/imgReceipt_text2"
+                    android:visibility="gone" />
+            </LinearLayout>
+        </RelativeLayout>
+    </ScrollView>
+
+</RelativeLayout><!--
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/black" >
+
+    <RelativeLayout
+        android:id="@+id/layoutRecieptTop"
+        android:layout_width="fill_parent"
+        android:layout_height="50dp"
+      android:background="@color/theme_color">
+        
+        <Button
+                android:id="@+id/btnDrawer"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:background="@drawable/button_drawer" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/layoutRecieptMid"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/layoutRecieptTop"
+        android:background="@drawable/bg_driver_detail_box"
+        android:visibility="gone" >
+
+        <RelativeLayout
+            android:id="@+id/driverImageThumb"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:layout_marginTop="5dp"
+            android:background="@drawable/profile_thumb" >
+
+            <ImageView
+                android:id="@+id/imgDriverPic"
+                android:layout_width="70dp"
+                android:layout_height="70dp"
+                android:layout_centerInParent="true" />
+        </RelativeLayout>
+
+        <TextView
+            android:id="@+id/txtDriverName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:layout_marginTop="10dp"
+            android:layout_toRightOf="@+id/driverImageThumb"
+            android:ellipsize="end"
+            android:maxLength="20"
+            android:text="@string/name"
+            android:textColor="@color/Black"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+
+        <ImageView
+            android:id="@+id/phoneIcon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/txtDriverName"
+            android:layout_marginLeft="5dp"
+            android:layout_marginTop="5dp"
+            android:layout_toRightOf="@+id/driverImageThumb"
+            android:background="@drawable/icon_phnumber" />
+
+        <TextView
+            android:id="@+id/txtDriverPhone"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/txtDriverName"
+            android:layout_marginLeft="5dp"
+            android:layout_marginTop="5dp"
+            android:layout_toRightOf="@+id/phoneIcon"
+            android:text="@string/name"
+            android:textColor="@color/Black"
+            android:textSize="16sp"
+            android:textStyle="bold" />
+
+        <ImageView
+            android:id="@+id/imgCarIcon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/phoneIcon"
+            android:layout_marginLeft="5dp"
+            android:layout_marginTop="5dp"
+            android:layout_toRightOf="@+id/driverImageThumb"
+            android:background="@drawable/icon_suvcar_grey" />
+
+        <TextView
+            android:id="@+id/txtCompanyName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/phoneIcon"
+            android:layout_marginLeft="5dp"
+            android:layout_marginTop="5dp"
+            android:layout_toRightOf="@+id/imgCarIcon"
+            android:ellipsize="end"
+            android:maxLength="20"
+            android:text="@string/name"
+            android:textColor="@color/Black"
+            android:textSize="15sp"
+            android:textStyle="bold" />
+
+        <ImageView
+            android:id="@+id/imgDivider"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/phoneIcon"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="5dp"
+            android:layout_toRightOf="@+id/txtCompanyName"
+            />
+
+        <TextView
+            android:id="@+id/txtTaxiNo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/phoneIcon"
+            android:layout_marginLeft="5dp"
+            android:layout_marginTop="5dp"
+            android:layout_toRightOf="@+id/imgDivider"
+            android:ellipsize="end"
+            android:maxLength="10"
+            android:text="@string/name"
+            android:textColor="@color/Black"
+            android:textSize="15sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/txtRating"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_marginLeft="10dp"
+            android:background="@drawable/icon_rating_box"
+            android:gravity="bottom|center_horizontal"
+            android:text="4.4"
+            android:textColor="@color/Black"
+            android:textSize="15sp"
+            android:textStyle="bold" />
+    </RelativeLayout>
+
+    <Button
+        android:id="@+id/btnSubmit"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="10dp"
+        android:background="@drawable/button_submit" />
+
+    <EditText
+        android:id="@+id/edtComments"
+        android:layout_width="match_parent"
+        android:layout_height="fill_parent"
+        android:layout_above="@+id/btnSubmit"
+        android:layout_below="@+id/btnToroWebLink"
+       android:layout_marginTop="10dp"
+       android:layout_marginBottom="10dp"
+        android:background="@drawable/comments_txt_field"
+        android:hint="You can share your experience with by \nleaving your comments here.This is optional."
+        android:inputType="text"
+        android:textColor="@color/White"
+        android:textColorHint="@color/white"
+        android:textSize="15sp" 
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        android:singleLine="false"
+        android:layout_alignLeft="@+id/layoutRatingBar"
+        android:layout_alignRight="@+id/layoutRatingBar"
+        />
+<EditText 
+    android:id="@+id/edtComments"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:hint="You can share your experience with us by leaving your comments here.This is optional."
+    android:background="@drawable/comments_txt_field"
+    android:layout_below="@+id/btnToroWebLink"
+      android:textColorHint="@color/white"
+    android:layout_above="@+id/btnSubmit"
+    android:textColor="@android:color/white"
+    android:layout_alignLeft="@+id/layoutRatingBar"
+        android:layout_alignRight="@+id/layoutRatingBar"
+          android:layout_marginTop="10dp"
+       android:layout_marginBottom="10dp"
+       android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        android:textSize="15sp" 
+        android:maxLines="3"
+    />
+    <RelativeLayout
+        android:id="@+id/layoutRatingBar"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/rel_new"
+        android:layout_centerHorizontal="true"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/rate_your_ride_box" >
+
+       
+
+        <TextView
+            android:id="@+id/txtDate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_marginTop="19dp"
+      
+          android:layout_centerHorizontal="true"
+            android:text="10 Sept, 2013"
+            android:textColor="@color/white"
+            android:textSize="13sp" />
+
+        <TextView
+            android:id="@+id/txtFare"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBaseline="@+id/txtDate"
+            android:layout_alignBottom="@+id/txtDate"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="20dp"
+            android:text="$ 50"
+            android:textColor="@color/white"
+            android:textSize="13sp" />
+        
+        
+         <RatingBar
+            android:id="@+id/ratingBarDriver"
+            style="@style/StarRatingBar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+         android:scaleX="1.2"
+         android:scaleY="1.2"
+            
+            android:layout_marginTop="30dp"
+            android:numStars="5"
+            android:layout_alignRight="@+id/txtFare"
+            android:layout_below="@+id/txtFare"
+            android:stepSize="1" />
+
+    </RelativeLayout>
+
+    <Button
+        android:id="@+id/btnToroWebLink"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/layoutRatingBar"
+        android:layout_centerHorizontal="true"
+      android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        
+        android:background="@drawable/button_weblink" />
+
+    <RelativeLayout
+        android:id="@+id/rel_new"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/layoutRecieptMid"
+       >
+         
+           <ImageView
+            android:id="@+id/imgReceipt_text1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:background="@drawable/message_tripcomplete" />
+        
+
+        <ImageView
+            android:id="@+id/imgReceipt_text2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="20dp"
+            android:layout_below="@+id/imgReceipt_text1"
+            android:background="@drawable/text_you_have_been_charged" />
+    </RelativeLayout>
+
+</RelativeLayout>
+
+
+-->

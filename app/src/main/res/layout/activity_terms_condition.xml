@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:padding="10dp">
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/background_login_pannel">
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:alpha=".1"
+            android:background="@color/panel_box_background" />
+
+        <TextView
+            android:id="@+id/txtHeader"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:background="@color/theme_color"
+            android:gravity="center"
+            android:padding="7dp"
+            android:text="@string/terms_condition"
+            android:textColor="@color/title_color"
+            android:textSize="16sp"
+            android:textStyle="bold" />
+
+        <RelativeLayout
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_below="@+id/txtHeader"
+            android:layout_centerHorizontal="true">
+
+            <WebView
+                android:id="@+id/txtTitle"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_above="@+id/bottomRel"
+                android:layout_centerHorizontal="true"
+                android:layout_marginBottom="10dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginTop="20dp"
+                android:alpha=".6" />
+
+            <RelativeLayout
+                android:id="@+id/bottomRel"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_marginBottom="5dp"
+                android:gravity="center_horizontal">
+
+                <Button
+                    android:id="@+id/btnAcceptCondition"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/button_oval_shape"
+                    android:paddingBottom="7dp"
+                    android:paddingLeft="20dp"
+                    android:paddingRight="20dp"
+                    android:paddingTop="7dp"
+                    android:text="@string/accept"
+                    android:textColor="@color/button_text_color" />
+
+                <Button
+                    android:id="@+id/btnDeclineCondition"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5dp"
+                    android:layout_toRightOf="@+id/btnAcceptCondition"
+                    android:background="@drawable/button_oval_shape"
+                    android:paddingBottom="7dp"
+                    android:paddingLeft="20dp"
+                    android:paddingRight="20dp"
+                    android:paddingTop="7dp"
+                    android:text="@string/decline"
+                    android:textColor="@color/button_text_color" />
+            </RelativeLayout>
+        </RelativeLayout>
+    </RelativeLayout>
+
+</RelativeLayout>

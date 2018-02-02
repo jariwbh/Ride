@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+  android:background="@drawable/bg_login_register"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:id="@+id/header_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/theme_color" >
+
+        <Button
+            android:id="@+id/btnBack"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:background="@drawable/button_back_ren" />
+
+        <TextView
+            android:id="@+id/header_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="PAYMENT"
+            android:textSize="16sp"
+            android:textColor="@color/title_color"
+            android:textStyle="bold" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/rel_2"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/header_layout"
+        android:padding="10dp"
+      >
+
+        <RelativeLayout
+            android:id="@+id/btnAddCard"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+           
+        android:layout_marginRight="10dp"
+        android:layout_marginLeft="10dp"
+            android:layout_marginTop="10dp"
+             >
+            
+            <Button
+            android:id="@+id/btn1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:background="@drawable/button_oval_shape"
+            android:gravity="center"
+            android:paddingTop="10dp"
+            android:paddingBottom="15dp"
+            android:layout_marginTop="15dp"
+            android:text="ADD CREDIT CARD"
+            android:textColor="@color/black" />
+
+            
+            </RelativeLayout>
+
+        <ListView
+            android:id="@+id/listCreditCard"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/btnAddCard"
+            android:paddingBottom="20dp"
+          android:layout_marginLeft="10dp"
+          android:layout_marginRight="10dp"
+             android:layout_marginTop="10dp"
+            android:background="@color/middle_background"
+            android:divider="@color/credit_card_listing_divider_color"
+            android:dividerHeight="1dp" 
+            android:layout_marginBottom="30dp"
+             />
+    </RelativeLayout>
+
+</RelativeLayout>

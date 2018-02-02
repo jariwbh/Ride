@@ -1,0 +1,341 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <android.support.v7.widget.Toolbar
+        android:layout_width="match_parent"
+        android:layout_height="49dp"
+        android:layout_alignParentTop="true"
+        android:background="@color/white70"
+        android:minHeight="?attr/actionBarSize"
+        android:theme="?attr/actionBarTheme" />
+
+    <ImageView
+        android:id="@+id/backBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:background="@drawable/ic_left_arrow" />
+
+    <TextView android:id="@+id/backText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/backBtn"
+        android:layout_marginTop="2dp"
+        android:layout_toEndOf="@+id/backBtn"
+        android:layout_toRightOf="@+id/backBtn"
+        android:fontFamily="sans-serif-light"
+        android:text="Back"
+        android:textColor="@color/colorText"
+        android:textSize="17sp" />
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        android:layout_above="@+id/cars"
+        android:background="#FFFFFF"
+        android:gravity="center_horizontal"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/info_1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:fontFamily="sans-serif"
+            android:text="Base fare $3.45/Initial 150 meters"
+            android:textColor="@color/colorText"
+            android:textSize="14sp"
+            android:visibility="gone" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="sans-serif-light"
+            android:text="$0.16/86 meters and $0.16/24 seconds"
+            android:textColor="@color/black2"
+            android:textSize="8dp"
+            android:visibility="gone"
+            tools:layout_editor_absoluteX="178dp"
+            tools:layout_editor_absoluteY="31dp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:weightSum="3">
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center_horizontal"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/cab1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/textView15"
+                    android:fontFamily="sans-serif-light"
+                    android:text="12.4 min"
+                    android:textColor="@color/black"
+                    android:textSize="16sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="sans-serif-light"
+                    android:text="Estimate pickup Time"
+                    android:textColor="@color/black2"
+                    android:textSize="9sp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center_horizontal"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/cab2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/textView15"
+                    android:fontFamily="sans-serif-light"
+                    android:text="$16.5"
+                    android:textColor="@color/black"
+                    android:textSize="16sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="sans-serif-light"
+                    android:text="Fare Estimate "
+                    android:textColor="@color/black2"
+                    android:textSize="9sp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center_horizontal"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/cab3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/textView15"
+                    android:fontFamily="sans-serif-light"
+                    android:text="1-4"
+                    android:textColor="@color/black"
+                    android:textSize="16sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="sans-serif-light"
+                    android:text="Person"
+                    android:textColor="@color/black2"
+                    android:textSize="9sp" />
+            </LinearLayout>
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/cars"
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        android:layout_above="@+id/bookRideBtnview"
+        android:background="@color/edit_text_bk"
+        android:weightSum="3"
+        tools:layout_editor_absoluteX="16dp"
+        tools:layout_editor_absoluteY="545dp">
+
+        <LinearLayout
+            android:id="@+id/sedan"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center_horizontal"
+            android:orientation="vertical">
+
+            <ImageView
+                android:id="@+id/imageView17"
+                android:layout_width="13dp"
+                android:layout_height="10dp"
+                android:background="@drawable/ic_triangle"
+                tools:layout_editor_absoluteX="16dp" />
+
+            <TextView
+                android:id="@+id/sedan1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="3dp"
+                android:fontFamily="sans-serif-light"
+                android:text="TextView"
+                android:textColor="#000000"
+                android:textSize="6.64dp"
+                android:visibility="gone"
+                tools:layout_editor_absoluteX="16dp" />
+
+            <ImageView
+                android:id="@+id/imageView16"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/ic_cab_deactive"
+                android:padding="3dp"
+                tools:layout_editor_absoluteX="16dp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="5dp"
+                android:fontFamily="sans-serif-light"
+                android:text="Yellow Sedan"
+                android:textColor="#000000"
+                android:textSize="8.33sp"
+                tools:layout_editor_absoluteX="16dp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/minivan"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center_horizontal"
+            android:orientation="vertical">
+
+            <ImageView
+                android:id="@+id/mini_i1"
+                android:layout_width="13dp"
+                android:layout_height="10dp"
+                android:background="@drawable/ic_triangle"
+                android:visibility="invisible"
+                tools:layout_editor_absoluteX="16dp" />
+
+            <TextView
+                android:id="@+id/mini_t1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="3dp"
+                android:fontFamily="sans-serif-light"
+                android:text="TextView"
+                android:textColor="#000000"
+                android:textSize="6.64dp"
+                android:visibility="gone"
+                tools:layout_editor_absoluteX="16dp" />
+
+            <ImageView
+                android:id="@+id/mini_i2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/ic_minivan_deactive"
+                android:padding="3dp"
+                tools:layout_editor_absoluteX="16dp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="sans-serif-light"
+                android:text="Yellow Minivan"
+                android:textColor="#000000"
+                android:textSize="9.33sp"
+                tools:layout_editor_absoluteX="16dp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/fullvan"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center_horizontal"
+            android:orientation="vertical">
+
+            <ImageView
+                android:id="@+id/full_i1"
+                android:layout_width="13dp"
+                android:layout_height="10dp"
+                android:background="@drawable/ic_triangle"
+                android:visibility="invisible"
+                tools:layout_editor_absoluteX="16dp" />
+
+            <TextView
+                android:id="@+id/full_t1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="3dp"
+                android:fontFamily="sans-serif-light"
+                android:text="TextView"
+                android:textColor="#000000"
+                android:textSize="6.64dp"
+                android:visibility="gone"
+                tools:layout_editor_absoluteX="16dp" />
+
+            <ImageView
+                android:id="@+id/full_i2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+
+                android:background="@drawable/ic_bigcar_deactive"
+                android:padding="3dp"
+                tools:layout_editor_absoluteX="16dp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="sans-serif-light"
+                android:text="Fullsize Van"
+                android:textColor="#000000"
+                android:textSize="9.33sp" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/bookRideBtnview"
+        android:layout_width="match_parent"
+        android:layout_height="42dp"
+        android:layout_alignParentBottom="true"
+        android:background="@color/white"
+        android:weightSum="10">
+
+        <Button
+            android:id="@+id/bookRideBtn"
+            android:layout_width="0dp"
+            android:layout_height="42dp"
+            android:layout_alignParentBottom="true"
+            android:layout_weight="9"
+            android:background="@color/colorPrimary"
+            android:text="Book Now"
+            android:textColor="#000000" />
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            android:layout_weight="1"
+            android:gravity="center">
+
+            <ImageView
+                android:id="@+id/btnAdvancebook"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+
+                android:background="@drawable/ic_book_schedule_later" />
+        </LinearLayout>
+    </LinearLayout>
+</RelativeLayout>

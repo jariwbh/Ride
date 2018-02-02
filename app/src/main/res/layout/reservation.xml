@@ -1,0 +1,408 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorPrimary" >
+
+    <RelativeLayout
+        android:id="@+id/rel_top"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="@color/colorPrimary">
+
+        <ImageView
+            android:id="@+id/btnBack"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:background="@drawable/ic_left_arrow" />
+
+        <TextView
+            android:id="@+id/txtTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_toEndOf="@+id/btnBack"
+            android:layout_toRightOf="@+id/btnBack"
+            android:text="@string/reservation"
+            android:textColor="@color/primaryTextColor"
+            android:textSize="16sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/txtTitle2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/txtTitle"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="2dp"
+            android:gravity="center_horizontal"
+            android:textColor="@color/yellow"
+            android:textSize="12sp"
+            android:visibility="gone" />
+
+        <ImageView
+            android:id="@+id/btnReservationList"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="5dp"
+            android:background="@drawable/ic_history_black_24dp"
+            android:padding="5dp" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/rel_top"
+        android:background="#FFFFFF">
+
+        <TextView
+            android:id="@+id/reservationText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="5dp"
+            android:textColor="@color/white" />
+
+        <RelativeLayout
+            android:id="@+id/mainRel"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/reservationText"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp"
+            android:background="@color/reservation_background_color"
+            android:orientation="vertical"
+            android:paddingBottom="10dp"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            android:paddingTop="10dp">
+
+            <EditText
+                android:id="@+id/edtName"
+                style="@style/edtTextStyle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:layout_toRightOf="@+id/imgName"
+                android:background="@drawable/background_text_field_new"
+                android:digits="qwertyuiopasdfghjklzxcvbnmMNBVCXZLKJHGFDSAPOIUYTREWQ "
+                android:drawableLeft="@drawable/name_icon"
+                android:drawablePadding="5dp"
+                android:hint="Name"
+                android:inputType="textCapSentences"
+                android:maxLength="30"
+                android:padding="5dp"
+                android:singleLine="true"
+                android:textColor="@color/text_color"
+
+                android:textColorHint="@color/text_color_hint"
+                android:textSize="18sp" />
+
+            <RelativeLayout
+                android:id="@+id/relPLoc"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/edtName"
+                android:layout_marginTop="5dp">
+
+                <TextView
+                    android:id="@+id/edtPLoc"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_toRightOf="@+id/imgPLoc"
+                    android:background="@drawable/background_text_field_new"
+                    android:drawableLeft="@drawable/pick_up_location_icon"
+                    android:drawablePadding="5dp"
+                    android:hint="Pickup Location"
+                    android:padding="5dp"
+                      android:textColor="@color/text_color"
+                    android:textColorHint="@color/text_color_hint"
+                    android:textSize="18sp" />
+            </RelativeLayout>
+
+            <TextView
+                android:id="@+id/edtDLoc"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/relPLoc"
+                android:layout_marginTop="5dp"
+                android:layout_toRightOf="@+id/imgDLoc"
+                android:background="@drawable/background_text_field_new"
+                android:drawableLeft="@drawable/drop_off_location_icon"
+                android:drawablePadding="5dp"
+                android:hint="Drop-off Location"
+                android:padding="5dp"
+                android:textColor="@color/text_color"
+
+                android:textColorHint="@color/text_color_hint"
+                android:textSize="18sp" />
+
+            <Button
+                android:id="@+id/edtPTime"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/edtPDate"
+                android:layout_marginTop="5dp"
+                android:layout_toRightOf="@+id/imgPTime"
+                android:background="@drawable/background_text_field_new"
+                android:digits="1234567890:"
+                android:drawableLeft="@drawable/pick_up_time_icon"
+                android:drawablePadding="5dp"
+                android:gravity="left|center_vertical"
+                android:hint="Pickup Time"
+                android:maxLength="15"
+                android:padding="5dp"
+                android:singleLine="true"
+                android:textColor="@color/text_color"
+                android:textColorHint="@color/text_color_hint"
+                android:textSize="18sp" />
+
+            <Button
+                android:id="@+id/edtPDate"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/edtDLoc"
+                android:layout_marginTop="5dp"
+                android:layout_toRightOf="@+id/imgPTime"
+                android:background="@drawable/background_text_field_new"
+                android:drawableLeft="@drawable/pick_up_date_icon"
+                android:drawablePadding="5dp"
+                android:gravity="left|center_vertical"
+                android:hint="Pickup Date"
+                android:maxLength="15"
+                android:padding="5dp"
+                android:singleLine="true"
+                android:textColor="@color/text_color"
+                android:textColorHint="@color/text_color_hint"
+                android:textSize="18sp" />
+
+            <RelativeLayout
+                android:id="@+id/relPhone"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/edtPTime"
+                android:background="@drawable/background_text_field_new"
+                android:drawablePadding="5dp"
+                android:visibility="gone">
+
+                <EditText
+                    android:id="@+id/edtPhCode"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:layout_toRightOf="@+id/imgPTime"
+                    android:background="@color/transparent"
+                    android:drawableLeft="@drawable/phone_icon"
+                    android:inputType="phone"
+                    android:maxLength="4"
+                    android:padding="5dp"
+                    android:singleLine="true"
+                    android:text="+919"
+                    android:textColor="@color/text_color"
+                    android:textColorHint="@color/text_color_hint"
+                    android:textSize="18sp" />
+
+                <EditText
+                    android:id="@+id/edtPhNumber"
+                    style="@style/edtTextStyle"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/imgPTime"
+                    android:layout_marginTop="5dp"
+                    android:layout_toRightOf="@+id/edtPhCode"
+                    android:background="@color/transparent"
+                    android:hint="Contact Number"
+                    android:inputType="phone"
+                    android:maxLength="15"
+                    android:padding="5dp"
+                    android:paddingLeft="10dp"
+                    android:paddingRight="10dp"
+                    android:singleLine="true"
+                    android:textColor="@color/text_color"
+                    android:textColorHint="@color/text_color_hint"
+                    android:textSize="18sp" />
+            </RelativeLayout>
+
+            <Button
+                android:id="@+id/edtCarType"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/relPhone"
+                android:layout_marginTop="5dp"
+                android:layout_toRightOf="@+id/imgCarType"
+                android:background="@drawable/background_text_field_new"
+                android:drawableLeft="@drawable/car_type_icon"
+                android:drawablePadding="5dp"
+                android:gravity="left|center_vertical"
+                android:hint="Choose your car"
+                android:maxLength="15"
+                android:padding="5dp"
+                android:singleLine="true"
+                android:textColor="@color/text_color"
+                android:textColorHint="@color/text_color_hint"
+
+                android:textSize="18sp" />
+
+            <EditText
+                android:id="@+id/edtAirLine"
+
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/edtCarType"
+                android:layout_marginTop="5dp"
+                android:layout_toRightOf="@+id/imgCarType"
+                android:background="@drawable/background_text_field_new"
+                android:drawableLeft="@drawable/airplane"
+                android:drawablePadding="5dp"
+                android:gravity="left|center_vertical"
+                android:hint="AirLine(Optional)"
+                android:maxLength="15"
+                android:padding="5dp"
+                android:singleLine="true"
+                android:textColor="@color/text_color"
+                android:textColorHint="@color/text_color_hint"
+                android:textSize="18sp"
+                android:visibility="gone" />
+
+            <EditText
+                android:id="@+id/edtFlight"
+
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/edtAirLine"
+                android:layout_marginTop="5dp"
+                android:layout_toRightOf="@+id/imgCarType"
+                android:background="@drawable/background_text_field_new"
+                android:drawableLeft="@drawable/airplane_numbers"
+                android:drawablePadding="5dp"
+                android:gravity="left|center_vertical"
+                android:hint="Flight Number(Optional)"
+                android:maxLength="15"
+                android:padding="5dp"
+                android:singleLine="true"
+                android:textColor="@color/text_color"
+                android:textColorHint="@color/text_color_hint"
+                android:textSize="18sp"
+                android:visibility="gone" />
+
+
+            <EditText
+                android:id="@+id/edtItemToMove"
+
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/edtFlight"
+                android:layout_marginTop="5dp"
+                android:layout_toRightOf="@+id/imgCarType"
+                android:background="@drawable/background_text_field_new"
+                android:drawableLeft="@drawable/items_to_move_icons"
+                android:drawablePadding="5dp"
+                android:gravity="left|center_vertical"
+                android:hint="Item to move"
+                android:maxLength="15"
+                android:padding="5dp"
+                android:singleLine="true"
+                android:textColor="@color/text_color"
+                android:textColorHint="@color/text_color_hint"
+                android:textSize="18sp"
+                android:visibility="gone" />
+
+            <EditText
+                android:id="@+id/edtItemWeight"
+                style="@style/edtTextStyle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/edtItemToMove"
+                android:layout_marginTop="5dp"
+                android:layout_toRightOf="@+id/imgCarType"
+                android:background="@drawable/background_text_field_new"
+                android:drawableLeft="@drawable/weight_of_items_icon"
+                android:drawablePadding="5dp"
+                android:gravity="left|center_vertical"
+                android:hint="Weight of item"
+                android:maxLength="15"
+                android:padding="5dp"
+                android:singleLine="true"
+                android:textColor="@color/text_color"
+                android:textColorHint="@color/text_color_hint"
+                android:textSize="18sp"
+                android:visibility="gone" />
+
+            <EditText
+                android:id="@+id/edtItemDimension"
+                style="@style/edtTextStyle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/edtItemWeight"
+                android:layout_marginTop="5dp"
+                android:layout_toRightOf="@+id/imgCarType"
+                android:background="@drawable/background_text_field_new"
+                android:drawableLeft="@drawable/dimmensions_icon"
+                android:drawablePadding="5dp"
+                android:gravity="left|center_vertical"
+                android:hint="Dimensions"
+                android:maxLength="15"
+                android:padding="5dp"
+                android:singleLine="true"
+                android:textColor="@color/text_color"
+                android:textColorHint="@color/text_color_hint"
+                android:textSize="18sp"
+                android:visibility="gone" />
+
+            <EditText
+                android:id="@+id/edtComment"
+                style="@style/edtTextStyle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/edtItemDimension"
+                android:layout_marginTop="5dp"
+                android:layout_toRightOf="@+id/imgCarType"
+                android:background="@drawable/background_text_field_new"
+                android:drawableLeft="@drawable/comments_icon"
+                android:drawablePadding="5dp"
+                android:gravity="left|center_vertical"
+                android:hint="Comments"
+                android:inputType="textMultiLine"
+                android:padding="5dp"
+                android:singleLine="true"
+                android:textColor="@color/text_color"
+                android:textColorHint="@color/text_color_hint"
+                android:textSize="18sp"
+                android:visibility="gone" />
+
+            <Button
+                android:id="@+id/btn_registration"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:layout_marginLeft="10dp"
+                android:layout_marginStart="10dp"
+                android:background="@color/colorPrimary"
+                android:padding="20dp"
+                android:text="MAKE RESERVATION"
+                android:visibility="visible" />
+
+            <LinearLayout android:background="@color/white"
+                android:id="@+id/listPickUp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/relPLoc"
+                android:orientation="vertical"
+                android:visibility="gone" />
+
+            <LinearLayout android:background="@color/white"
+                android:id="@+id/listDropOff"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/edtDLoc"
+                android:orientation="vertical"
+                android:visibility="gone" />
+        </RelativeLayout>
+    </RelativeLayout>
+
+</RelativeLayout>

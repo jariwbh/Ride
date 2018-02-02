@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/transparent" >
+
+    <TextView
+        android:id="@+id/txtLoc"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_toLeftOf="@+id/btnCancel"
+        android:text=""
+        android:textColor="@color/text_color"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/txtFare"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/txtLoc"
+        android:layout_marginLeft="5dp"
+        android:layout_toLeftOf="@+id/btnCancel"
+        android:singleLine="true"
+        android:text=""
+        android:textColor="@color/text_color" />
+
+    <Button
+        android:id="@+id/btnCancel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:background="@drawable/btn_cross_reservation"
+        android:visibility="gone" />
+
+</RelativeLayout>

@@ -1,0 +1,65 @@
+buildscript {
+    repositories {
+        maven { url 'https://maven.fabric.io/public' }
+    }
+
+    dependencies {
+        classpath 'io.fabric.tools:gradle:1.+'
+    }
+}
+apply plugin: 'com.android.application'
+apply plugin: 'io.fabric'
+
+repositories {
+    maven { url 'https://maven.fabric.io/public' }
+}
+
+
+android {
+    compileSdkVersion 25
+    buildToolsVersion '26.0.2'
+    useLibrary 'org.apache.http.legacy'
+    defaultConfig {
+        vectorDrawables.useSupportLibrary = true
+    }
+    defaultConfig {
+        applicationId "com.tms"
+        minSdkVersion 14
+        targetSdkVersion 25
+    }
+
+
+
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.txt'
+        }
+    }
+}
+
+dependencies {
+    implementation 'com.android.support:support-v4:25.4.0'
+    compile project(':wheel')
+    compile files('libs/android-directionalviewpager-1.2.1fixed.jar')
+    compile files('libs/crittercism_v3_0_8_sdkonly.jar')
+    compile files('libs/image-chooser-library-1.2.7.jar')
+    compile files('libs/picasso-2.1.1.jar')
+    compile files('libs/universal-image-loader-1.9.1.jar')
+    compile 'com.loopj.android:android-async-http:1.4.9'
+    compile 'com.github.asne.facebook:facebook:3.17.2'
+    compile 'com.google.firebase:firebase-messaging:11.4.0'
+    compile 'com.google.android.gms:play-services-maps:11.4.0'
+    compile 'com.google.android.gms:play-services-auth:11.4.0'
+    compile 'com.google.android.gms:play-services-location:11.4.0'
+    compile 'com.google.android.gms:play-services-places:11.4.0'
+    //   compile project(':googleplayservices_lib')
+    compile('com.crashlytics.sdk.android:crashlytics:2.6.8@aar') {
+        transitive = true;
+    }
+    compile 'com.android.support:appcompat-v7:25.4.0'
+    compile 'com.android.support:design:25.4.0'
+    compile 'com.android.support.constraint:constraint-layout:1.0.2'
+}
+apply plugin: 'com.google.gms.google-services'

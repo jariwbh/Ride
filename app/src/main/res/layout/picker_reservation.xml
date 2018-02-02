@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="fill_parent"
+        android:alpha=".85"
+        android:background="@color/Black" />
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:layout_margin="10dp"
+        android:background="@drawable/background_base_fare"
+        android:padding="10dp" >
+
+        <TextView
+            android:id="@+id/textTop"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="2dp"
+            android:text="SELECT A CAR"
+            android:textColor="@color/text_color"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+
+        <RelativeLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/textTop"
+            android:layout_marginBottom="10dp" >
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:orientation="vertical"
+                android:weightSum="1" >
+
+                <Button
+                    android:id="@+id/hybCarBtn"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight=".25"
+                    android:background="@drawable/background_bottom_bar"
+                    android:drawableLeft="@drawable/car_regular"
+                    android:text="Yellow Sedan"
+                    android:textColor="@color/text_color" />
+
+                <Button
+                    android:id="@+id/suvCarBtn"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight=".25"
+                    android:background="@drawable/background_bottom_bar"
+                    android:drawableLeft="@drawable/car_suv"
+                    android:text="Yelllow minivan"
+                    android:textColor="@color/text_color" />
+                
+                  <Button
+                    android:id="@+id/blackCarBtn"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight=".25"
+                    android:background="@drawable/background_bottom_bar"
+                    android:drawableLeft="@drawable/car_suv"
+                    android:text="Full size van"
+                      android:visibility="visible"
+                    android:textColor="@color/text_color" />
+
+                <Button
+                    android:id="@+id/luxuryCarBtn"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight=".25"
+                    android:background="@drawable/background_bottom_bar"
+                    android:drawableLeft="@drawable/car_luxury"
+                    android:text="LUX-SHARE-RIDE"
+                    android:visibility="gone"
+                    android:textColor="@color/theme_color"
+                    />
+
+                <Button
+                    android:id="@+id/armourCarBtn"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight=".25"
+                    android:background="@drawable/background_bottom_bar"
+                    android:drawableLeft="@drawable/car_armour"
+                    android:text="LUX-SHARE-RIDE"
+                    android:visibility="gone"
+                    android:textColor="@color/theme_color"
+                    />
+            </LinearLayout>
+        </RelativeLayout>
+    </RelativeLayout>
+
+</RelativeLayout>

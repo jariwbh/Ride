@@ -1,0 +1,198 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@drawable/bg_login_register" >
+
+    <RelativeLayout
+        android:id="@+id/layoutHomeTop"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/theme_color" >
+
+        <Button
+            android:id="@+id/btnBack"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:background="@drawable/button_back_ren" />
+        
+        
+        <TextView
+            android:id="@+id/txtHeader"
+            android:layout_width="wrap_content"
+            android:text="PICK UP LOCATION"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:textColor="@color/title_color"
+            android:textSize="16sp"
+            android:textStyle="bold"/>
+
+      
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/layoutEditLocation"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/layoutHomeTop"
+        android:background="@color/background_search_bar" 
+        android:paddingTop="5dp"
+        android:paddingBottom="5dp">
+
+    <Button
+            android:id="@+id/btnPicUp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="10dp"
+            android:background="@drawable/button_pick_up" />
+
+        <Button
+            android:id="@+id/btnDestination"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="10dp"
+            android:visibility="gone"
+            android:background="@drawable/button_destination" />
+
+      
+      
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="2dp"
+           android:layout_toLeftOf="@+id/btnDestination"
+            android:layout_toRightOf="@+id/btnPicUp"
+          android:paddingTop="5dp"
+          android:paddingBottom="5dp"
+          android:layout_marginRight="10dp"
+            android:background="@drawable/search_bar" >
+
+            <Button
+                android:id="@+id/btnSearch"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="5dp"
+                android:background="@drawable/icon_search" />
+
+            <EditText
+                android:id="@+id/edtPickUpAddress"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_toLeftOf="@+id/btnCross"
+                android:layout_toRightOf="@+id/btnSearch"
+                android:background="@android:color/transparent"
+                android:gravity="center_vertical"
+                android:hint="Enter Location"
+                style="@style/edtTextStyle"
+                android:textColor="@color/pick_up_search_text"
+                android:imeOptions="actionSearch"
+                android:paddingLeft="5dp"
+                android:singleLine="true" />
+
+            <Button
+                android:id="@+id/btnCross"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="5dp"
+                android:background="@drawable/icon_cross" />
+        </RelativeLayout>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/layoutSearchResult"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/layoutEditLocation"
+        android:background="@color/theme_color"
+        android:layout_marginTop="2dp"
+     >
+
+        <TextView
+            android:id="@+id/txtSearchResult"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="20dp"
+            android:text="Search Result"
+            android:textColor="@color/title_color"
+            android:textSize="18sp"
+            android:paddingTop="5dp"
+            android:paddingBottom="5dp"
+            android:textStyle="bold" />
+        
+        <ImageButton
+            android:id="@+id/imgBtnSearch"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:src="@drawable/arrow_right_pick_up"
+            android:background="@color/transparent"/>
+    </RelativeLayout>
+
+    <ListView
+        android:id="@+id/listSerchResult"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/layoutSearchResult"
+        android:cacheColorHint="@android:color/transparent"
+        android:divider="@color/pick_up_divider"
+        android:dividerHeight="1dp"
+        android:visibility="gone" >
+    </ListView>
+
+    <RelativeLayout
+        android:id="@+id/layoutRecentResult"
+        android:layout_width="fill_parent"
+        android:visibility="gone"
+        android:layout_marginTop="2dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/listSerchResult"
+         android:background="@color/login_hdr_back">
+
+        <TextView
+            android:id="@+id/txtReecentResult"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="20dp"
+            android:text="Recent Search "
+             android:paddingTop="5dp"
+            android:paddingBottom="5dp"
+            android:textColor="@color/Black"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+        
+        <ImageButton
+            android:id="@+id/imgBtnRecent"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:src="@drawable/arrow_right_pick_up"
+            android:background="@color/transparent"/>
+    </RelativeLayout>
+
+    <ListView
+        android:id="@+id/listRecentSerchResult"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/layoutRecentResult"
+        android:cacheColorHint="@android:color/transparent"
+         android:divider="@color/pick_up_divider"
+        android:dividerHeight="1dp"
+        android:visibility="gone" >
+    </ListView>
+
+</RelativeLayout>

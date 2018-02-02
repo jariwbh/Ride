@@ -1,0 +1,258 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg_login_register" >
+
+    <RelativeLayout
+        android:id="@+id/header_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/theme_color" >
+
+        <Button
+            android:id="@+id/btnCancel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/button_back_ren" />
+
+        <TextView
+            android:id="@+id/header_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="@string/edit_card"
+            android:textSize="16sp"
+            android:textColor="@color/title_color"
+            android:textStyle="bold" />
+
+        <Button
+            android:id="@+id/btnSave"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="5dp"
+            android:background="@drawable/button_header_save" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/detail_layout"
+        android:layout_width="wrap_content"
+        android:layout_height="180dp"
+        android:layout_below="@+id/header_layout"
+        android:layout_centerHorizontal="true"
+        android:layout_margin="10dp"
+        android:background="@drawable/credit_card" >
+        
+            <TextView
+                android:id="@+id/txtCreditCard"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Credit Card" 
+                 android:layout_marginLeft="15dp"
+                android:layout_marginTop="10dp"
+                android:textColor="@color/credit_card_heading"
+               android:textSize="20sp"
+               />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/txtName"
+            android:layout_marginTop="10dp" >
+
+            <ImageView
+                android:id="@+id/imgStars"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="15dp"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/cc_number_star" />
+
+            <TextView
+                android:id="@+id/txtCardNo2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="15dp"
+                android:textSize="25sp"
+                android:layout_toRightOf="@+id/imgStars"
+                android:text="****"
+                android:textColor="@color/credit_card_number"
+                android:textStyle="bold" />
+
+           <TextView
+                android:id="@+id/imgExpiryDate"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/imgStars"
+                android:layout_marginLeft="15dp"
+                android:layout_marginTop="10dp"
+                android:textColor="@color/credit_card_labels"
+                android:textSize="16sp"
+                android:text="EXP" />
+          <TextView
+                android:id="@+id/imgZip"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/imgStars"
+                android:layout_centerHorizontal="true"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="10dp"
+                android:textSize="16sp"
+                android:textColor="@color/credit_card_labels"
+                android:text="ZIP" />
+
+            <TextView
+                android:id="@+id/imgCvv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_below="@+id/imgStars"
+                android:layout_centerHorizontal="true"
+                android:layout_marginRight="25dp"
+                android:layout_marginTop="5dp"
+              android:textSize="16sp"
+                android:textColor="@color/credit_card_labels"
+                android:text="CVV" />
+
+            
+            <RelativeLayout
+                android:layout_width="70dp"
+                   android:layout_marginLeft="15dp"
+                android:layout_height="wrap_content"
+                  android:layout_below="@+id/imgExpiryDate">
+            <Button
+                android:id="@+id/txtExpiryDate"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/imgExpiryDate"
+             
+                android:background="@color/transparent"
+                android:gravity="center"
+                android:hint="Date"
+                android:padding="5dp"
+                android:textColor="@color/credit_card_number"
+              android:textSize="19dp"
+           />
+            
+                   <ImageView
+                       android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:layout_below="@+id/txtExpiryDate"
+                android:background="@drawable/background_text_field_black_selected"
+            android:layout_alignParentRight="true"   />
+</RelativeLayout>
+
+               <RelativeLayout
+                   android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                  android:layout_below="@+id/imgZip"
+                        android:layout_centerHorizontal="true">
+            <EditText
+                android:id="@+id/txtZip"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/imgZip"
+          android:padding="5dp"
+                android:background="@color/transparent"
+                android:gravity="center"
+                android:hint="Zip"
+                 android:textSize="19dp"
+                android:inputType="number"
+                android:maxLength="6"
+                android:textColor="@color/credit_card_number"
+                 />
+            
+                     <ImageView
+                         android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:layout_below="@+id/txtZip"
+                android:background="@drawable/background_text_field_black_selected"
+            android:layout_alignParentRight="true"   />
+            
+            </RelativeLayout>
+            
+               
+               <RelativeLayout
+                   android:layout_width="80dp"
+                android:layout_height="wrap_content"
+                  android:layout_below="@+id/imgCvv"
+                      android:layout_marginRight="15dp"
+                      android:layout_alignParentRight="true"
+                               >
+
+            <EditText
+                android:id="@+id/edtCvv"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+              
+                android:layout_below="@+id/imgCvv"
+            android:background="@color/transparent"
+               android:layout_centerHorizontal="true"
+                android:gravity="center"
+                android:hint="CVV"
+                android:padding="5dp"
+                android:inputType="numberPassword"
+                android:maxLength="4"
+                android:layout_marginTop="5dp"
+                 android:textSize="19dp"
+                android:textColor="@color/credit_card_number"
+               />
+            
+            <ImageView
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:layout_below="@+id/edtCvv"
+                android:background="@drawable/background_text_field_black_selected"
+            android:layout_alignParentRight="true"   />
+            
+            </RelativeLayout>
+        </RelativeLayout>
+
+        <TextView
+            android:id="@+id/txtName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+           android:layout_marginLeft="15dp"
+            android:layout_marginBottom="15dp"
+            android:text="Name"
+            android:textColor="@color/credit_card_number"
+         
+            android:textSize="20dp"
+            
+             />
+    </RelativeLayout>
+
+<TextView
+        android:id="@+id/imgTextInfo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/detail_layout"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"
+        android:textColor="@color/text_field_info"
+        android:text="@string/credit_card_detials_info"
+        android:gravity="center"
+/>
+
+    <Button
+        android:id="@+id/btnDelete"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/imgTextInfo"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="5dp"
+           android:gravity="center"
+                android:textColor="@color/title_color"
+        android:padding="10dp"
+        android:text="DELETE"
+        android:textSize="18sp"
+         android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"
+          android:background="@drawable/background_request_taxi" />
+
+</RelativeLayout>

@@ -1,0 +1,348 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+     >
+
+    <LinearLayout
+        android:id="@+id/linear"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        >
+
+        <RelativeLayout
+            android:id="@+id/header_layout"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:background="@color/colorPrimary">
+
+            <ImageView
+                android:id="@+id/btnBack"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:background="@drawable/ic_left_arrow" />
+
+            <TextView
+                android:id="@+id/header_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_toEndOf="@+id/btnBack"
+                android:layout_toRightOf="@+id/btnBack"
+                android:text="@string/add_payment"
+                android:textColor="@color/primaryTextColor"
+                android:textSize="16sp"
+                android:textStyle="bold" />
+        </RelativeLayout>
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/theme_color"
+            android:padding="7dp">
+
+            <TextView
+                android:id="@+id/txtHeader1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:layout_marginTop="100dp"
+                android:gravity="center"
+                android:text="@string/taxi_mobile_solution"
+                android:textColor="@color/text_color"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/txtHeader1"
+                android:gravity="center_vertical">
+
+                <include
+                    layout="@layout/divider"
+                    android:layout_width="110dp"
+                    android:layout_height="1dp"
+                    android:layout_marginEnd="8dp"
+                    android:layout_marginStart="8dp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+
+                    android:text="@string/add_payment"
+                    android:textSize="12sp" />
+
+
+                <include
+                    layout="@layout/divider"
+                    android:layout_width="120dp"
+                    android:layout_height="1dp"
+                    android:layout_marginEnd="8dp"
+                    android:layout_marginStart="8dp" />
+
+            </LinearLayout>
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight=".8"
+            android:background="@drawable/background_login_pannel">
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_above="@+id/dummy"
+                android:alpha="1"
+                android:background="@color/panel_box_background" />
+
+            <RelativeLayout
+                android:id="@+id/rel_header"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/theme_color"
+                android:padding="7dp">
+
+                <TextView
+                    android:id="@+id/txtHeader"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:background="@color/theme_color"
+                    android:gravity="center"
+                    android:text="@string/linkCard"
+                    android:textColor="@color/title_color"
+                    android:textSize="16sp"
+                    android:textStyle="bold"
+                    android:visibility="gone" />
+
+
+                <TextView
+                    android:id="@+id/txtSkip"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:paddingBottom="5dp"
+                    android:paddingLeft="10dp"
+                    android:paddingRight="10dp"
+                    android:paddingTop="5dp"
+                    android:text="@string/skip_card"
+                    android:textColor="@color/title_color"
+                    android:textSize="15sp"
+                    android:visibility="gone" />
+            </RelativeLayout>
+
+            <ScrollView
+                android:id="@+id/scrollView"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_above="@+id/btnSubmit"
+                android:layout_below="@+id/rel_header"
+                android:paddingBottom="5dp">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <RelativeLayout
+                        android:id="@+id/rel_card_no"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:paddingBottom="5dp"
+                        android:paddingLeft="15dp"
+                        android:paddingRight="15dp"
+                        android:paddingTop="5dp">
+
+                        <ImageView
+                            android:id="@+id/imgCardNo"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:src="@drawable/icon_creditcard" />
+
+                        <EditText
+                            android:id="@+id/edtCardNo"
+                            style="@style/edtTextStyle"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_toRightOf="@+id/imgCardNo"
+                            android:background="@color/transparent"
+                            android:hint="@string/credit_card_no"
+                            android:inputType="number"
+                            android:maxLength="16"
+                            android:padding="5dp"
+                            android:singleLine="true"
+                            android:textColor="@color/text_color"
+                            android:textSize="15sp" />
+
+                        <ImageView
+                            android:id="@+id/selector_card_no"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/edtCardNo"
+                            android:background="@drawable/background_text_field" />
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:id="@+id/rel_expiry"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/rel_card_no"
+                        android:paddingBottom="5dp"
+                        android:paddingLeft="15dp"
+                        android:paddingRight="15dp"
+                        android:paddingTop="5dp">
+
+                        <ImageView
+                            android:id="@+id/imgExpiryDate"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:src="@drawable/icon_calendar" />
+
+                        <EditText
+                            android:id="@+id/edtexpirydate"
+                            style="@style/edtTextStyle"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_toRightOf="@+id/imgExpiryDate"
+                            android:background="@color/transparent"
+                            android:gravity="left|center_vertical"
+                            android:hint="@string/expiry_date"
+                            android:padding="5dp"
+                            android:textColor="@color/text_color"
+                            android:textSize="15sp" />
+
+                        <ImageView
+                            android:id="@+id/selector_expiry"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/edtexpirydate"
+                            android:background="@drawable/background_text_field" />
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:id="@+id/rel_cvv"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/rel_expiry"
+                        android:paddingBottom="5dp"
+                        android:paddingLeft="15dp"
+                        android:paddingRight="15dp"
+                        android:paddingTop="5dp">
+
+                        <ImageView
+                            android:id="@+id/imgCvv"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:src="@drawable/icon_cvv_num" />
+
+                        <EditText
+                            android:id="@+id/edtCVVNO"
+                            style="@style/edtTextStyle"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_toRightOf="@+id/imgCvv"
+                            android:background="@color/transparent"
+                            android:hint="@string/cvv_no"
+                            android:inputType="numberPassword"
+                            android:maxLength="4"
+                            android:padding="5dp"
+                            android:textColor="@color/text_color"
+                            android:textSize="15sp" />
+
+                        <ImageView
+                            android:id="@+id/selector_cvv"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/edtCVVNO"
+                            android:background="@drawable/background_text_field" />
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:id="@+id/rel_zip"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/rel_cvv"
+                        android:paddingBottom="5dp"
+                        android:paddingLeft="15dp"
+                        android:paddingRight="15dp"
+                        android:paddingTop="5dp">
+
+                        <ImageView
+                            android:id="@+id/imgZip"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:src="@drawable/icon_zipcode" />
+
+                        <EditText
+                            android:id="@+id/edtZip"
+                            style="@style/edtTextStyle"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_toRightOf="@+id/imgZip"
+                            android:background="@color/transparent"
+                            android:hint="Zip Code"
+                            android:inputType="number"
+                            android:maxLength="6"
+                            android:padding="5dp"
+                            android:textColor="@color/text_color" />
+
+                        <ImageView
+                            android:id="@+id/selector_zip"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/edtZip"
+                            android:background="@drawable/background_text_field" />
+                    </RelativeLayout>
+
+                    <Button
+                        android:id="@+id/btnSubmit"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentBottom="true"
+                        android:layout_below="@+id/rel_zip"
+                        android:layout_centerHorizontal="true"
+                        android:layout_margin="10dp"
+                        android:layout_marginBottom="5dp"
+                        android:background="@color/colorPrimary"
+                        android:text="@string/submit"
+                        android:textColor="@color/button_text_color"
+                        android:textSize="13sp" />
+                </RelativeLayout>
+
+
+            </ScrollView>
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="0dp"
+            android:layout_height="200dp"
+            android:layout_weight=".1"
+            android:visibility="gone">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:src="@drawable/progress_dots_3" />
+        </RelativeLayout>
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/txt_info"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/linear"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="10dp"
+        android:gravity="center"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        android:text="@string/info_link_card"
+        android:textSize="14sp" />
+
+</RelativeLayout>

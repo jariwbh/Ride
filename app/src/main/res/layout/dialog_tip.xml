@@ -1,0 +1,183 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/transparent" >
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:alpha=".9"
+        android:background="@color/black" />
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:background="@drawable/background_base_fare"
+        android:gravity="center"
+        android:paddingBottom="30dp" >
+
+        <TextView
+            android:id="@+id/txt1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:background="@drawable/car_details_top_bar"
+            android:gravity="center"
+            android:padding="5dp"
+            android:text="Enjoyed the Ride!!! Reward Driver"
+            android:textColor="@color/title_color"
+            android:textSize="18sp" />
+
+        <TextView
+            android:id="@+id/txtTotalAmount"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="10dp"
+            android:textColor="@color/dialog_title_color"
+            android:textSize="20dp" 
+            android:layout_below="@+id/txt1"
+            android:text="Total Amount"/>
+
+        <RadioButton
+            android:id="@+id/rb_main"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/txtTotalAmount"
+            android:layout_marginLeft="5dp"
+            android:layout_marginTop="30dp"
+            android:button="@drawable/background_radio_button"
+            android:textColor="@color/dialog_title_color"
+            android:checked="false" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/txtTotalAmount"
+            android:layout_marginTop="30dp"
+            android:layout_toLeftOf="@+id/edtTip"
+            android:text="$"
+            android:textColor="@color/dialog_title_color"
+            android:textSize="20dp" />
+
+        <EditText
+            android:id="@+id/edtTip"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/txtTotalAmount"
+            android:layout_centerHorizontal="true"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="20dp"
+            android:background="@drawable/background_edit_text_tip"
+            android:inputType="numberDecimal"
+            android:padding="10dp"
+            android:textColor="@color/text_color"
+            android:singleLine="true" />
+
+        <TextView
+            android:id="@+id/txtInfo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/edtTip"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="10dp"
+            android:text="or select gratutity amount "
+            android:textColor="@color/dialog_title_color" />
+
+        <RadioGroup
+            android:id="@+id/radioGroup"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/txtInfo"
+            android:layout_centerHorizontal="true"
+            android:layout_margin="5dp"
+            android:orientation="horizontal"
+            android:weightSum="3" >
+
+            <RadioButton
+                android:id="@+id/rb1"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:button="@drawable/background_radio_button"
+                android:text="10%"
+                android:textColor="@color/dialog_title_color" />
+
+            <RadioButton
+                android:id="@+id/rb2"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_weight="1"
+                android:button="@drawable/background_radio_button"
+                android:checked="true"
+                android:text="20%"
+                android:textColor="@color/dialog_title_color" />
+
+            <RadioButton
+                android:id="@+id/rb3"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_weight="1"
+                android:button="@drawable/background_radio_button"
+                android:text="30%"
+                android:textColor="@color/dialog_title_color" />
+        </RadioGroup>
+
+        <TextView
+            android:id="@+id/txtTip"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/radioGroup"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="5dp"
+            android:background="@drawable/background_request_taxi"
+            android:gravity="center"
+            android:padding="10dp"
+            android:textColor="@color/theme_color" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/txtTip"
+            android:layout_marginTop="10dp"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            android:weightSum="1" >
+
+            <Button
+                android:id="@+id/btnCancel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:layout_weight=".5"
+                android:background="@drawable/background_request_taxi"
+                android:gravity="center"
+                android:padding="8dp"
+                android:text="Cancel"
+                android:textColor="@color/white" />
+
+            <Button
+                android:id="@+id/btnSubmit"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="10dp"
+                android:layout_weight=".5"
+                android:background="@drawable/background_request_taxi"
+                android:gravity="center"
+                android:padding="8dp"
+                android:text="Tip Driver"
+                android:textColor="@color/white" />
+        </LinearLayout>
+    </RelativeLayout>
+
+</RelativeLayout>

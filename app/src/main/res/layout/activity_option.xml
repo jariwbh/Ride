@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical" >
+    
+       
+    <TextView
+        android:id="@+id/logo"
+        android:layout_centerInParent="true"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/app_logo"
+        android:gravity="center"
+        android:textSize="20sp"
+       android:visibility="gone"
+        android:textColor="@color/title_color"
+        android:text="Taxi Mobile\nSolution"/>
+
+    <TextView
+        android:id="@+id/frag_login_web_link"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_gravity="bottom"
+        android:autoLink="web"
+        android:gravity="center"
+        android:layout_marginBottom="10dp"
+        android:linksClickable="true"
+        android:visibility="gone"
+        android:text="@string/login_web_link"
+        android:textColor="@color/white" />
+
+    <RelativeLayout
+        android:id="@+id/layoutOptionTop"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/frag_login_web_link"
+        android:layout_centerHorizontal="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginTop="30dp"
+        android:layout_marginBottom="30dp"
+        android:gravity="center_horizontal"
+        android:orientation="horizontal" >
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:background="@drawable/login_signup"
+            android:weightSum="1" >
+
+            <Button
+                android:id="@+id/btnLogin"
+                android:layout_width="0dp"
+                android:layout_height="60dp"
+                android:layout_weight=".5"
+                android:background="@android:color/transparent"
+                android:paddingBottom="10dp"
+                android:paddingTop="10dp" />
+
+            <Button
+                android:id="@+id/btnRegister"
+                android:layout_width="0dp"
+                android:layout_height="60dp"
+                android:layout_weight=".5"
+                android:background="@android:color/transparent"
+                android:paddingBottom="10dp"
+                android:paddingTop="10dp" />
+        </LinearLayout>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/net_rel"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/bg_transparent_full_sc"
+        android:visibility="gone" >
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+          >
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/icon_alert" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:text="@string/no_internet_connection"
+                android:textColor="@android:color/white"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+        </RelativeLayout>
+    </RelativeLayout>
+
+</RelativeLayout>

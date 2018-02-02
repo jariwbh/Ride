@@ -1,0 +1,203 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+
+    <LinearLayout
+        android:id="@+id/dest"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="10dp"
+        android:background="#FFFFFF"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:visibility="gone">
+
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:background="@drawable/ic_menu_black_24dp"
+            android:onClick="showDrawer" />
+
+        <TextView
+            android:id="@+id/txt_dest"
+            android:layout_width="242dp"
+            android:layout_height="50dp"
+            android:layout_centerVertical="true"
+            android:layout_weight="1"
+            android:gravity="left|center_vertical"
+            android:lines="1"
+
+            android:text="Where to ?"
+            android:textAppearance="@style/TextAppearance.AppCompat.Light.SearchResult.Title"
+            android:textSize="16sp"
+
+            />
+
+        <View
+            android:layout_width="1dp"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="10dp"
+            android:layout_marginTop="10dp"
+            android:background="#c0c0c0" />
+
+        <ImageView
+            android:id="@+id/directionButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:background="@drawable/ic_directions_run_black_24dp" />
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:id="@+id/where_to"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="100dp"
+        android:background="@android:drawable/alert_light_frame"
+        android:gravity="center_vertical"
+        android:visibility="gone">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/colorEditTextFocusLost"
+            android:gravity="center_vertical">
+
+            <View
+                android:layout_width="6dp"
+                android:layout_height="6dp"
+                android:layout_marginLeft="20dp"
+                android:background="#000000" />
+
+            <Button
+                android:id="@+id/wheretobutton"
+                style="@style/Widget.AppCompat.Button.Borderless"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginLeft="30dp"
+                android:background="@color/colorEditTextFocusLost"
+                android:gravity="left|center_vertical"
+                android:text="Where to ?"
+                android:textAppearance="@style/TextAppearance.AppCompat.Light.SearchResult.Title"
+                android:textSize="18sp"
+                android:textStyle="italic" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <RelativeLayout
+        android:id="@+id/address_bar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#FFFFFF"
+        android:visibility="gone">
+
+        <ImageButton
+            android:id="@+id/btnCloseBookingPage"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:layout_centerVertical="true"
+            android:layout_marginBottom="10dp"
+            android:layout_marginTop="10dp"
+            android:background="@color/transparent"
+            android:padding="10dp"
+            android:visibility="visible"
+            app:srcCompat="@drawable/ic_keyboard_backspace" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="70dp"
+            android:gravity="center_horizontal"
+            android:orientation="vertical">
+
+            <View
+                android:layout_width="5dp"
+                android:layout_height="5dp"
+                android:background="#000000" />
+
+            <View
+                android:layout_width="1dp"
+                android:layout_height="30dp"
+                android:background="#000000" />
+
+            <View
+                android:layout_width="5dp"
+                android:layout_height="5dp"
+                android:background="#000000" />
+
+
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/source_editText"
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginLeft="40dp"
+            android:layout_marginRight="30dp"
+            android:layout_marginTop="54dp"
+            android:background="@drawable/edittext"
+            android:hint="Enter pickup location"
+            android:padding="2dp"
+            android:singleLine="true"
+            android:textAppearance="@style/TextAppearance.AppCompat.Button"
+            android:textSize="16sp" />
+
+
+        <TextView
+            android:id="@+id/destination_editText"
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+            android:layout_below="@id/source_editText"
+            android:layout_marginBottom="5dp"
+            android:layout_marginLeft="40dp"
+            android:layout_marginRight="30dp"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/edittext"
+            android:hint="Where to ?"
+            android:padding="2dp"
+            android:singleLine="true"
+            android:textAppearance="@style/TextAppearance.AppCompat.Button"
+            android:textSize="16sp" />
+
+    </RelativeLayout>
+
+    <include
+        android:id="@+id/bottomsheetbar_view"
+        layout="@layout/bottom_sheet_bar"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/address_bar"
+        android:visibility="gone" />
+
+    <include
+        android:id="@+id/car_options_dialog"
+        layout="@layout/cars_view"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:layout_alignParentBottom="true"
+        android:background="@color/white"
+        android:gravity="bottom"
+        android:visibility="gone" />
+
+
+</RelativeLayout>

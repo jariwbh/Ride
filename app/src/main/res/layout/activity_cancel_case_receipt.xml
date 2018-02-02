@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg_login_register"  >
+    
+    <RelativeLayout
+        android:id="@+id/layoutRecieptTop"
+        android:layout_width="fill_parent"
+        android:layout_height="50dp"
+        android:background="@color/theme_color" >
+
+        <!--
+             <Button
+            android:id="@+id/btnDrawer"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:background="@drawable/button_drawer" />
+
+        -->
+
+        <TextView
+            android:id="@+id/headerText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="@string/yourReciept"
+            android:textColor="@color/title_color"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+    </RelativeLayout>
+    
+    <TextView
+        android:id="@+id/txtCancel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:textColor="@color/White"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        android:layout_marginTop="10dp"
+        android:layout_below="@+id/layoutRecieptTop"
+        android:text="@string/trip_cancelled_receipt"/>
+    
+    <RelativeLayout
+                android:id="@+id/rel_new"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/txtCancel"
+                android:background="@drawable/receipt"
+                 >
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_marginLeft="35dp"
+                    android:layout_marginTop="15dp"
+                    android:text="Date:"
+                    android:layout_below="@+id/imgReceipt_text2"
+                    android:textColor="@color/receipt_content_text_color"
+                    android:textSize="15sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/txtDate"
+                    android:layout_below="@+id/imgReceipt_text2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginRight="35dp"
+                    android:layout_marginTop="15dp"
+                    android:text="10 September 2013"
+                    android:textColor="@color/receipt_content_text_color"
+                    android:textSize="15sp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/txtDate"
+                    android:layout_marginLeft="35dp"
+                    android:layout_marginTop="5dp"
+                    android:text="Cancellation Fee:"
+                    android:textColor="@color/receipt_content_text_color"
+                    android:textSize="15sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/txtFare"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignRight="@+id/txtDate"
+                    android:layout_below="@+id/txtDate"
+                    android:layout_marginLeft="35dp"
+                    android:layout_marginTop="5dp"
+                    android:text="$ 50"
+                    android:textColor="@color/receipt_content_text_color"
+                    android:textSize="15sp" />
+
+                <TextView
+                    android:id="@+id/imgReceipt_text2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                 android:layout_marginTop="20dp"
+                    android:layout_centerHorizontal="true"
+                    
+                     android:layout_marginLeft="35dp"
+                     android:layout_marginRight="35dp"
+                     android:gravity="center"
+                    android:text="Receipt has been emailed"
+                    android:textColor="@color/receipt_content_text_color" />
+
+                
+
+                
+            </RelativeLayout>
+            
+    
+   
+    
+    
+     <Button
+        android:id="@+id/btnSubmit"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="10dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:background="@drawable/button_oval_shape"
+        android:paddingBottom="15dp"
+        android:paddingTop="15dp"
+        android:text="SUBMIT"
+        android:textColor="@color/button_text_color" />
+
+</RelativeLayout>

@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:visibility="visible">
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="19dp"
+        android:layout_marginTop="14dp"
+        android:background="@drawable/ic_menu_black_24dp"
+        android:onClick="showDrawer"
+        android:visibility="gone" />
+
+    <LinearLayout
+        android:id="@+id/dest"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="10dp"
+        android:layout_marginTop="50dp"
+        android:background="@drawable/shadow_bg"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:visibility="visible">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="11.62dp"
+            android:background="@drawable/ic_menu_black_24dp"
+            android:onClick="showDrawer" />
+
+        <TextView
+            android:id="@+id/txt_dest"
+            android:layout_width="242dp"
+            android:layout_height="43dp"
+            android:layout_centerVertical="true"
+            android:layout_weight="1"
+            android:background="@color/white"
+            android:fontFamily="sans-serif"
+            android:gravity="left|center_vertical"
+            android:lines="1"
+            android:paddingLeft="10dp"
+
+            android:text="Wanna go somewhere?"
+            android:textSize="14sp" />
+
+        <View
+            android:layout_width="1dp"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="10dp"
+            android:layout_marginTop="10dp"
+            android:background="#c0c0c0"
+            android:visibility="gone" />
+
+        <ImageView
+            android:id="@+id/directionButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:background="@drawable/ic_directions_run_black_24dp"
+            android:visibility="gone" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignEnd="@+id/dest"
+        android:layout_alignParentBottom="true"
+        android:layout_alignRight="@+id/dest"
+        android:layout_marginBottom="14dp"
+        android:background="@drawable/shadow_bg">
+
+        <ImageView
+            android:id="@+id/imageView12"
+            android:layout_width="45dp"
+            android:layout_height="45dp"
+            android:background="@color/white"
+            android:padding="10dp"
+            app:srcCompat="@drawable/ic_current_location" />
+    </LinearLayout>
+
+    <ImageView
+        android:id="@+id/location_center"
+        android:layout_width="15dp"
+        android:layout_height="15dp"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:visibility="gone"
+        app:srcCompat="@drawable/ic_home_screen_location" />
+
+    <View
+        android:id="@+id/line"
+        android:layout_width="0.7dp"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/location_center"
+        android:layout_below="@+id/dest"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:layout_marginTop="-32dp"
+        android:background="@color/black"
+        android:visibility="gone" />
+</RelativeLayout>

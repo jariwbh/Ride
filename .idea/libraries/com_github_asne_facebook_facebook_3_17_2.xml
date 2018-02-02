@@ -1,0 +1,14 @@
+<component name="libraryTable">
+  <library name="com.github.asne.facebook:facebook-3.17.2">
+    <CLASSES>
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/facebook-3.17.2.aar/5d3eee366cadae09e4379656d8503679/res" />
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/facebook-3.17.2.aar/5d3eee366cadae09e4379656d8503679/jars/classes.jar!/" />
+    </CLASSES>
+    <JAVADOC>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.github.asne.facebook/facebook/3.17.2/1562066a4b7a1d36f0adfb2b7fcd2b336ab333e7/facebook-3.17.2-javadoc.jar!/" />
+    </JAVADOC>
+    <SOURCES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.github.asne.facebook/facebook/3.17.2/1baf11bc6e69e61bdd7680af543aa3e65c11cda4/facebook-3.17.2-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

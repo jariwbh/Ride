@@ -1,0 +1,479 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorPrimary">
+    -
+
+
+    <RelativeLayout
+        android:id="@+id/relHeader"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="@color/colorPrimary">
+
+        <ImageView
+            android:id="@+id/btnBack"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="10dp"
+            android:background="@drawable/ic_left_arrow" />
+
+        <TextView
+            android:id="@+id/header_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_toEndOf="@+id/btnBack"
+            android:layout_toRightOf="@+id/btnBack"
+            android:text="@string/refer_a_friend"
+            android:textColor="@color/primaryTextColor"
+            android:textSize="16sp"
+            android:textStyle="bold" />
+    </RelativeLayout>
+    -
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/relHeader"
+        android:paddingBottom="20dp">
+        -
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="40dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginTop="20dp"
+            android:background="@drawable/background_refer_friend"
+            android:paddingBottom="20dp">
+
+            <RelativeLayout
+                android:id="@+id/relText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="4dp"
+                android:layout_marginRight="4dp"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/background_refer_friend"
+                android:gravity="center">
+
+                <ImageView
+                    android:id="@+id/imgIcon"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/icon_sharing" />
+                -
+
+
+                <TextView
+                    android:id="@+id/txtIcon"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="20dp"
+                    android:layout_toRightOf="@+id/imgIcon"
+                    android:text="Ride TMS Together"
+                    android:textColor="@color/refer_a_friend_info_text_color"
+                    android:textSize="16sp" />
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/imgIcon"
+                    android:layout_centerHorizontal="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginTop="10dp">
+
+                    <TextView
+                        android:id="@+id/textPromoCode"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="40dp"
+                        android:layout_marginTop="10dp"
+                        android:text="Share your coupon code"
+                        android:textColor="@color/refer_a_friend_info_text_color"
+                        android:textSize="14sp" />
+
+                    <TextView
+                        android:id="@+id/textPromoCode_1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="3dp"
+                        android:layout_marginTop="10dp"
+                        android:layout_toRightOf="@+id/textPromoCode"
+                        android:text="promo"
+                        android:textColor="@color/text_color"
+                        android:textSize="14sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/textPromoCode_2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/textPromoCode"
+                        android:layout_centerHorizontal="true"
+                        android:text="with your friends,family,colleagues.They get"
+                        android:textColor="@color/refer_a_friend_info_text_color"
+                        android:textSize="14sp" />
+
+                    <TextView
+                        android:id="@+id/textPromoCode_3"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/textPromoCode_2"
+                        android:layout_marginLeft="10dp"
+                        android:text="They get"
+                        android:textColor="@color/refer_a_friend_info_text_color"
+                        android:textSize="14sp"
+                        android:visibility="gone" />
+
+                    <TextView
+                        android:id="@+id/textPromoCode_4"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/textPromoCode_2"
+                        android:layout_marginLeft="10dp"
+                        android:layout_toRightOf="@+id/textPromoCode_3"
+                        android:text="$20"
+                        android:textColor="@color/text_color"
+                        android:textSize="14sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/textPromoCode_5"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/textPromoCode_2"
+                        android:layout_toRightOf="@+id/textPromoCode_4"
+                        android:text="off on their first TMS trip. Once"
+                        android:textColor="@color/refer_a_friend_info_text_color"
+                        android:textSize="14sp" />
+
+                    <TextView
+                        android:id="@+id/textPromoCode_6"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/textPromoCode_5"
+                        android:text="they complete the ride, you will also get"
+                        android:textColor="@color/refer_a_friend_info_text_color"
+                        android:textSize="14sp" />
+
+                    <TextView
+                        android:id="@+id/textPromoCode_7"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/textPromoCode_5"
+                        android:layout_toRightOf="@+id/textPromoCode_6"
+                        android:text="$20"
+                        android:textColor="@color/text_color"
+                        android:textSize="14sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/textPromoCode_8"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/textPromoCode_7"
+                        android:layout_centerHorizontal="true"
+                        android:text=" credit in your TMS account."
+                        android:textColor="@color/refer_a_friend_info_text_color"
+                        android:textSize="14sp" />
+                </RelativeLayout>
+            </RelativeLayout>
+            -
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/relText"
+                android:layout_marginTop="20dp"
+                android:background="@color/colorPrimary"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:paddingBottom="10dp"
+                android:paddingTop="10dp"
+                android:weightSum="4">
+
+                <Button
+                    android:id="@+id/btnFacebook"
+                    android:layout_width="0dp"
+                    android:layout_height="120dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/background_button_refer_a_friend"
+                    android:drawableTop="@drawable/button_fb"
+                    android:paddingBottom="20dp"
+                    android:paddingTop="20dp"
+                    android:text="FACEBOOK"
+
+                    android:textColor="@color/refer_a_friend_button_text_color"
+                    android:textSize="12sp" />
+
+                <Button
+                    android:id="@+id/btnTwitter"
+                    android:layout_width="0dp"
+                    android:layout_height="120dp"
+                    android:layout_marginLeft="2dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/background_button_refer_a_friend"
+                    android:drawableTop="@drawable/button_twitter"
+                    android:paddingBottom="23dp"
+                    android:paddingTop="25dp"
+                    android:text="TWITTER"
+                    android:textColor="@color/refer_a_friend_button_text_color"
+                    android:textSize="12sp" />
+
+                <Button
+                    android:id="@+id/btnSms"
+                    android:layout_width="0dp"
+                    android:layout_height="120dp"
+                    android:layout_marginLeft="2dp"
+                    android:layout_toRightOf="@+id/btnTwitter"
+                    android:layout_weight="1"
+                    android:background="@drawable/background_button_refer_a_friend"
+                    android:drawableTop="@drawable/button_sms"
+                    android:paddingBottom="20dp"
+                    android:paddingTop="21dp"
+                    android:text="SMS"
+                    android:textColor="@color/refer_a_friend_button_text_color"
+                    android:textSize="12sp" />
+
+                <Button
+                    android:id="@+id/btnEmail"
+                    android:layout_width="0dp"
+                    android:layout_height="120dp"
+                    android:layout_marginLeft="2dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/background_button_refer_a_friend"
+                    android:drawableTop="@drawable/button_email"
+                    android:paddingBottom="20dp"
+                    android:paddingTop="28dp"
+                    android:text="EMAIL"
+                    android:textColor="@color/refer_a_friend_button_text_color"
+                    android:textSize="12sp" />
+            </LinearLayout>
+        </RelativeLayout>
+
+        <ImageView
+            android:id="@+id/cars"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:src="@drawable/cars" />
+    </RelativeLayout>
+
+</RelativeLayout><!--
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+    <RelativeLayout
+        android:id="@+id/relHeader"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/theme_color" >
+
+        <Button
+            android:id="@+id/btnBack"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="10dp"
+            android:background="@drawable/button_back_ren" />
+
+        <TextView
+            android:id="@+id/header_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="@string/refer_a_friend"
+            android:textColor="@color/title_color"
+          
+            android:textStyle="bold" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/relSecond"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/relHeader"
+        android:background="@drawable/bg_share" >
+
+        <RelativeLayout
+            android:id="@+id/relText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp" >
+
+            <RelativeLayout
+                android:id="@+id/relText1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_centerVertical="true" >
+
+              
+             <RelativeLayout
+                 android:id="@+id/text_1_rel"
+                 android:layout_width="match_parent"
+                 android:layout_height="wrap_content"
+                 android:gravity="center_horizontal">   
+                <TextView
+                    android:id="@+id/textPromoCode"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                   android:gravity="center_horizontal"
+                    android:layout_marginTop="5dp"
+                    android:textStyle="bold"
+                    android:text="Share your promo code"
+                    android:textColor="@android:color/white" />
+                
+                
+                <ImageView
+                    android:id="@+id/divider"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="15dp"
+                    android:layout_below="@+id/textPromoCode"
+                    android:background="@drawable/divider_share"/>
+
+                <TextView
+                    android:id="@+id/textPromoCode_1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="3dp"
+                    android:layout_marginTop="30dp"
+                    android:layout_toRightOf="@+id/textPromoCode"
+                    android:text="promo"
+                    android:textColor="@color/white" />
+                  <TextView
+                    android:id="@+id/textPromoCode_2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/textPromoCode"
+                    android:layout_centerHorizontal="true"
+                    android:text="with your friends, family and collegues."
+                    android:textColor="@android:color/white" />
+                
+                </RelativeLayout>
+
+              
+
+                <TextView
+                    android:id="@+id/textPromoCode_3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/text_1_rel"
+                    
+                    android:layout_marginTop="20dp"
+                    android:text="They will receive a"
+                    android:textColor="@android:color/white" />
+
+                <TextView
+                    android:id="@+id/textPromoCode_4"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/text_1_rel"
+                    android:layout_toRightOf="@+id/textPromoCode_3"
+                    android:text=" $10."
+                    android:layout_marginTop="20dp"
+                    android:textColor="@color/white" />
+
+                <TextView
+                    android:id="@+id/textPromoCode_5"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/text_1_rel"
+                    android:layout_toRightOf="@+id/textPromoCode_4"
+                    android:text=" credit on their first TORO trip. "
+                    android:layout_marginTop="20dp"
+                    android:textColor="@android:color/white" />
+
+                <TextView
+                    android:id="@+id/textPromoCode_6"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/textPromoCode_5"
+                    android:layout_marginLeft="10dp"
+                    android:text=" Upon commpletion of their first ride, you will also "
+                    android:textColor="@android:color/white" />
+
+                <TextView
+                    android:id="@+id/textPromoCode_7"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/textPromoCode_5"
+                    android:layout_toRightOf="@+id/textPromoCode_6"
+                    
+                    android:textColor="@color/white" />
+
+                <TextView
+                    android:id="@+id/textPromoCode_8"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/textPromoCode_7"
+                    android:layout_centerHorizontal="true"
+                    android:text="receive a $10. credit in your TORO RIDE account."
+                    android:textColor="@android:color/white" />
+               
+            </RelativeLayout>
+        </RelativeLayout>
+
+        <LinearLayout
+            android:id="@+id/relButtons"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/relText"
+            android:layout_marginLeft="12dp"
+            android:layout_marginRight="12dp"
+            android:layout_marginTop="10dp"
+            android:gravity="center_horizontal"
+            android:orientation="vertical"
+            android:weightSum="1" >
+
+            
+
+            <Button
+                android:id="@+id/btnTwitter"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:background="@drawable/button_twitter" />
+            
+            <Button
+                android:id="@+id/btnFacebook"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:background="@drawable/button_facebook" />
+
+           
+
+            <Button
+                android:id="@+id/btnEmail"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:background="@drawable/button_email" />
+            
+             <Button
+                android:id="@+id/btnSms"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:background="@drawable/button_text_message" />
+        </LinearLayout>
+    </RelativeLayout>
+
+</RelativeLayout>
+
+-->

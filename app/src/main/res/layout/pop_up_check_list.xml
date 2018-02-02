@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ImageView
+        android:id="@+id/imgTouch"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:alpha=".7"
+        android:background="@color/Black" />
+
+
+    <TextView
+        android:id="@+id/imgDriverRoute2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_margin="20dp"
+        android:background="@color/background_search_bar"
+        android:gravity="center"
+        android:paddingBottom="10dp"
+        android:paddingTop="10dp"
+        android:text="TMS share vehicle is now onsite"
+        android:textColor="@color/white" />
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/imgDriverRoute2"
+        android:layout_margin="20dp"
+        android:background="@drawable/background_check_list"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/txtHeader"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_margin="5dp"
+            android:background="@color/theme_color"
+            android:drawablePadding="10dp"
+            android:drawableTop="@drawable/info_icon"
+            android:gravity="bottom|center_horizontal"
+            android:paddingBottom="5dp"
+            android:paddingLeft="5dp"
+            android:paddingRight="5dp"
+            android:paddingTop="10dp"
+            android:text="@string/check_list"
+            android:textColor="@color/white" />
+
+        <TextView
+            android:id="@+id/txtTitle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/txtHeader"
+            android:layout_margin="5dp"
+            android:gravity="center_horizontal"
+            android:text="@string/safe_ride_check_list"
+            android:textColor="@color/Black"
+            android:textSize="16sp"
+
+
+            />
+
+        <TextView
+            android:id="@+id/txtContent"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/txtTitle"
+            android:layout_margin="5dp"
+            android:gravity="center_horizontal"
+            android:linksClickable="true"
+            android:text="1.) Confirm the license plate number in app matches the one on your drivers vehicle.\n\n2.) Confirm the name/picture of the driver  in app matches the driver  in the car.\n\n3.) Questions? Send an email to info@taximobilesolutions.com and we'll be in touch."
+            android:textColor="@color/Black"
+            android:textColorLink="@color/theme_color"
+            android:textSize="16sp"
+
+
+            />
+
+        <Button
+            android:id="@+id/btnCancel"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/txtContent"
+            android:layout_marginBottom="10dp"
+            android:layout_marginTop="20dp"
+            android:background="@color/transparent"
+
+            android:drawablePadding="5dp"
+            android:drawableTop="@drawable/divider"
+            android:gravity="bottom|center_horizontal"
+            android:padding="10dp"
+            android:text="ENJOY YOUR RIDE"
+            android:textColor="@color/gray" />
+
+
+    </RelativeLayout>
+
+
+</RelativeLayout>

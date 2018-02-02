@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@drawable/bg_transparent" >
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerInParent="true"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:background="@drawable/picker_bar" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/done_btn"
+            android:weightSum="1" >
+
+            <kankan.wheel.widget.WheelView
+                android:id="@+id/wheel_2"
+                android:layout_width="0dp"
+                android:layout_height="200dp"
+                android:layout_weight=".5" />
+
+            <kankan.wheel.widget.WheelView
+                android:id="@+id/wheel_1"
+                android:layout_width="0dp"
+                android:layout_height="200dp"
+                android:layout_weight=".5" />
+        </LinearLayout>
+
+        
+        
+        <Button
+            android:id="@+id/done_btn"
+            style="?android:attr/buttonStyleSmall"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentTop="true"
+          android:layout_marginTop="5dp"
+             android:paddingTop="10dp"
+                android:paddingBottom="10dp"
+                android:paddingLeft="20dp"
+                android:paddingRight="20dp"
+                android:layout_marginBottom="5dp"
+                android:layout_marginRight="5dp"
+                android:text="DONE"
+                android:textColor="@color/button_text_color"
+                android:background="@drawable/button_oval_shape"/>
+    </RelativeLayout>
+
+</RelativeLayout>

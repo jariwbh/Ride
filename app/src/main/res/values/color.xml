@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<resources>
+
+    <color name="colorPrimary">#ffc900</color>
+    <color name="colorText">#353535</color>
+
+    <color name="colorPrimaryDark">#ffc900</color>
+    <color name="primaryTextColor">#000000</color>
+    <color name="secondaryTextColor">#353535</color>
+    <color name="gray">#bbbbbb</color>
+    <color name="edit_text_bk">#f4f4f4</color>
+    <color name="edit_text_font">#9d9d9d</color>
+    <color name="Black20">#15000000</color>
+    <color name="black">#000000</color>
+    <color name="white">#FFFFFF</color>
+    <color name="white70">#CCFFFFFF</color>
+    <color name="yellow">#FFFF00</color>
+    <color name="red">#FF0000</color>
+    <color name="black2">#777777</color>
+    <color name="White">#FFFFFF</color>
+    <color name="Yellow">#FFFF00</color>
+    <color name="Black">#07000000</color>
+    <!-- Login screen -->
+    <color name="theme_color">#ffffff</color>
+    <color name="theme_color_another">#93CFFC</color>
+    <color name="title_color">#016493</color>
+    <color name="transparent">#00000000</color>
+    <color name="panel_box_background">#ffffff</color>
+    <color name="text_field">#2F2F2F</color>
+    <color name="text_field_selected">#50b0fa</color>
+    <color name="text_field_info">#FFFFFF</color>
+    <color name="text_color">#616161</color>
+    <color name="text_color_hint">#616161</color>
+    <color name="middle_background">#FFFFFF</color>
+    <color name="login_hdr_back">#ffffff</color>
+    <!-- Forgot Password Screen -->
+    <color name="text_color_fp">#616161</color>
+    <color name="text_color_hint_fp">#616161</color>
+    <!-- Home Screen -->
+    <color name="background_search_bar">#016493</color>
+    <color name="pop_up_stroke_color">#93CFFC</color>
+    <color name="confirmation_text">#FFFFFF</color>
+    <color name="button_unselected_state_color">#016493</color>
+    <color name="button_selected_state_color">#016493</color>
+    <color name="bottom_bar_color">#ffffff</color>
+    <color name="base_fare_popup_color">#DEDEDE</color>
+    <color name="base_fare_color">#2f2f2f</color>
+    <!-- driver's details -->
+    <!-- SideMenu -->
+    <!-- Refer Afreind -->
+    <color name="refer_a_friend_background_color">#FFFFFF</color>
+    <color name="refer_a_friend_button_text_color">#FFFFFF</color>
+    <color name="refer_a_friend_info_text_color">#616161</color>
+    <!-- Reservation -->
+    <color name="reservation_background_color">#FFFFFF</color>
+    <!-- Promo code screen -->
+    <color name="promo_code_text_color">#016493</color>
+    <!-- Verify screen -->
+    <color name="verify_info_color">#2F2F2F</color>
+    <!-- Pick Up Location -->
+    <color name="pick_up_divider">#676767</color>
+    <color name="pick_up_search_text">#616161</color>
+    <!-- My Profile -->
+    <color name="profile_edit_text_color">#3b3b3b</color>
+    <color name="profile_edit_text_color_new">#616161</color>
+    <!-- Credit card Listing -->
+    <color name="credit_card_listing_number_color">#3b3b3b</color>
+    <color name="credit_card_listing_divider_color">#c3c3c3</color>
+    <!-- Credit Card details -->
+    <color name="credit_card_heading">#3b3b3b</color>
+    <color name="credit_card_number">#000000</color>
+    <color name="credit_card_labels">#787878</color>
+    <!-- receipt -->
+    <color name="receipt_content_text_color">#616161</color>
+    <!-- driver tip -->
+    <color name="dialog_title_color">#3b3b3b</color>
+    <color name="profile_bg">#016493</color>
+    <color name="underline_color">#93CFFC</color>
+    <color name="button_text_color">#172D44</color>
+    <color name="button_bg_color">#ffffff</color>
+
+    <color name="colorEditTextDisable">#e7e1e1</color>
+    <color name="colorEditTextFocusLost">#f4f4f4</color>
+    <color name="colorEditTextFocusGained">#e7e4e4</color>
+</resources>

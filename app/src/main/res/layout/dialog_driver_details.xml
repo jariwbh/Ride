@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+    
+    
+    <ImageView
+        android:id="@+id/imgCancel"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/black"
+        android:alpha=".9"/>
+    
+    <RelativeLayout
+        android:id="@+id/popUp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:layout_margin="10dp"
+        android:padding="5dp"
+        android:background="@drawable/background_dark">
+        
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:textColor="@color/black"
+            android:layout_marginTop="5dp"
+            android:textStyle="bold"
+            android:id="@+id/title"
+            android:text="@string/driver_pop_up_title"/>
+        
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/title"
+            android:layout_marginLeft="5dp"
+            android:text="Name"
+            android:id="@+id/txtName"
+             android:textColor="@color/black"
+                />
+        
+         <TextView
+              android:id="@+id/txtNameActual"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/title"
+            android:layout_marginRight="5dp"
+            android:text="Name"
+            android:layout_alignParentRight="true"
+             android:textColor="@color/black"
+                />
+         
+          
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/txtNameActual"
+            android:layout_marginLeft="5dp"
+            android:text="Phone"
+             android:textColor="@color/black"
+                />
+        
+         <TextView
+              android:id="@+id/txtContactActual"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/txtNameActual"
+            android:layout_marginRight="5dp"
+            android:text="Name"
+            android:layout_alignParentRight="true"
+             android:textColor="@color/black"
+                />
+        
+         
+         <TextView
+             android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/txtContactActual"
+            android:layout_marginLeft="5dp"
+            android:text="Vehicle Type"
+             android:textColor="@color/black"
+                />
+        
+         <TextView
+              android:id="@+id/txtTaxiTypeActual"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/txtContactActual"
+            android:layout_marginRight="5dp"
+            android:text="Name"
+            android:layout_alignParentRight="true"
+             android:textColor="@color/black"
+                />
+         
+             <TextView
+                 android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/txtTaxiTypeActual"
+            android:layout_marginLeft="5dp"
+            android:text="Vehicle Number"
+             android:textColor="@color/black"
+             
+                />
+        
+         <TextView
+              android:id="@+id/txtTaxiNumberActual"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/txtTaxiTypeActual"
+            android:layout_marginRight="5dp"
+            android:text="Name"
+            android:layout_alignParentRight="true"
+             android:textColor="@color/black"
+             android:layout_marginBottom="10dp"
+                />
+        
+        
+        </RelativeLayout>
+    
+
+</RelativeLayout>

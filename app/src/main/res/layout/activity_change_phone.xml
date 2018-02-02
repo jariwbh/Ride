@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+      android:paddingLeft="30dp"
+    android:paddingRight="30dp" 
+    android:background="@drawable/bg_login_register" >
+
+    
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="200dp"
+        android:layout_below="@+id/layoutHomeTop"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/background_login_pannel" >
+        
+        
+           <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            
+           
+            android:background="@color/panel_box_background" />
+                <RelativeLayout 
+            android:id="@+id/rel_header"
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            android:background="@color/theme_color">
+
+        <TextView
+            android:id="@+id/txtTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@color/theme_color"
+            android:gravity="center"
+            android:layout_centerInParent="true"
+           
+            android:text="@string/changePhoneNumber"
+            android:textColor="@color/title_color"
+            android:textSize="14sp"
+            android:textStyle="bold" />
+<Button
+    android:id="@+id/btnBack"
+    android:layout_centerVertical="true"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:background="@drawable/button_back_ren"/>
+
+        
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/rel_2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/rel_header"
+             android:paddingTop="5dp"
+              android:paddingBottom="5dp"
+                android:paddingLeft="15dp"
+                  android:paddingRight="15dp"
+          >
+
+            
+
+            <ImageView
+                android:id="@+id/phoneIcon"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+               
+                android:gravity="left|center_vertical"
+                android:text="Contact"
+                android:background="@drawable/phone_icon"
+                android:textSize="17sp" />
+
+            <EditText
+                android:id="@+id/edtCountryCode"
+                android:layout_width="50dp"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/mailIcon"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="10dp"
+                android:layout_toRightOf="@+id/phoneIcon"
+                android:background="@android:color/transparent"
+                android:digits="1234567890"
+                android:gravity="center_vertical|right"
+                android:inputType="number"
+                android:maxLength="4"
+                android:singleLine="true"
+                 android:padding="5dp"
+                 android:text="+123"
+                 android:enabled="true"
+                android:textColor="@color/text_color" />
+
+            <EditText
+                android:id="@+id/edtUserPhone"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/mailIcon"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_toRightOf="@+id/edtCountryCode"
+                android:background="@color/transparent"
+                android:gravity="center_vertical|left"
+                android:inputType="number"
+                android:maxLength="15"
+                 android:padding="5dp"
+                android:paddingLeft="10dp"
+                   android:hint="@string/phone"
+                android:singleLine="true"
+                android:textColor="@color/text_color" />
+            
+            
+              <ImageView
+                android:id="@+id/selector_phone"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/edtUserPhone"
+                android:background="@drawable/background_text_field" />
+        </RelativeLayout>
+
+        <Button
+            android:id="@+id/btnChangePhone"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/submit"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="20dp"
+             android:textColor="@color/text_color"
+            android:textSize="13sp"
+            android:layout_marginBottom="5dp"
+            android:layout_alignParentBottom="true"
+               android:background="@drawable/button_oval_shape" />
+    </RelativeLayout>
+
+</RelativeLayout>
